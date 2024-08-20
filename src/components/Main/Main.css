@@ -1,0 +1,30 @@
+.main {
+  background: linear-gradient(rgb(0,0,0) 20%, rgb(255, 255, 255, 0) 80%, rgb(0,0,0)), url(../../assets/fundo-banner.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  color: white;
+  font-size: 24px;
+}
+.main strong, p{
+  color: hsl(243, 100%, 69%);
+}
+
+.main h1, p {
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.main img {
+  max-width: 20rem;
+}
+
