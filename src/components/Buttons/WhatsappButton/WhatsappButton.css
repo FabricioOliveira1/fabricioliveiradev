@@ -1,6 +1,5 @@
 .whatsappButton {
   background-color: white;
-  color: black;
   width: 12rem;
   border: 1px black solid;
   border-radius: 40px;
@@ -17,4 +16,9 @@
 
 .whatsappButton p{
   font-weight: 700;
+  color: black;
+}
+
+.whatsappButton svg {
+  fill: black;
 }
