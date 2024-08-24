@@ -2,7 +2,7 @@ body {
   background: black;
 }
 
-body p, h1, h2, h3, a{
+body p, h1, h2, h3, a ul, li{
   margin: 0;
   padding: 0;
 

@@ -1,0 +1,26 @@
+.skills {
+  padding: 1.5rem;
+}
+
+.skills .typescriptIcon g {
+  mix-blend-mode: normal;
+  fill: #2C74B6;
+}
+
+.skills .reactIcon {
+  fill: #5ED3F3;
+}
+
+.skills .cssIcon {
+  fill: #1D3DD3;
+}
+
+.skills .powerups {
+  background: linear-gradient(22deg, rgba(29,47,131,1) 4%, rgba(64,146,168,1) 79%);
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.skills li {
+  font-size: 18px;
+}
