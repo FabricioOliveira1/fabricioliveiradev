@@ -5,6 +5,19 @@ import Main from './components/Main';
 import './App.css'
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+import Portifolio from './components/Portifolio';
+
+import nathlogo from './assets/nathalia-brum-img.png'
+
+
+const cardsInfo = [
+  { projectName: 'nathaliabrum',
+    title:'Site Social Media Nathalia',
+    tags: ['javascript','react', 'css'],
+    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
+    image: nathlogo
+  },
+]
 
 function App() {
   return (
@@ -14,6 +27,7 @@ function App() {
       <About />
       <Contact />
       <Skills />
+      <Portifolio cardsInfo={cardsInfo}/>
     </div>
   );
 }

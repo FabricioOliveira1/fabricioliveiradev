@@ -1,4 +1,4 @@
-import CTABUtton from "../Buttons/CTAButton"
+import CTABUtton from "../ui/Buttons/CTAButton"
 import './Main.css'
 import astronauta from '../../assets/undraw_launch_day_4e04.svg'
 

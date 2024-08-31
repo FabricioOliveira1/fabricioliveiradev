@@ -1,5 +1,5 @@
 import './Contact.css'
-import CTAButton from '../Buttons/CTAButton'
+import CTAButton from '../ui/Buttons/CTAButton'
 
 const Contact = () => {
   return (
