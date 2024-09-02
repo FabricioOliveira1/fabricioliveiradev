@@ -1,0 +1,56 @@
+.sliderCard {
+    font-size: 18px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../../../../assets/nathalia-brum-img.png);
+    background-position: top;
+    background-size: contain;
+    
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 25rem;
+  }
+  
+  .sliderCard .listItem-img {
+    height: 60%;
+    overflow: hidden;
+  } 
+  
+  .sliderCard p {
+    text-align: start;
+    line-height: 1.5rem;
+  }
+  
+  .sliderCard .listItem-img img {
+    width: 20rem;
+  }
+  
+  .sliderCard .listItem-description {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 20rem;
+  }
+  
+  .sliderCard .sliderCard-buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .sliderCard .cardButton {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(243, 100%, 69%);
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 20px;
+    padding: 0.2rem;
+    text-decoration: none;
+  }
+  
