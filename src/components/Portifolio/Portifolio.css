@@ -1,5 +1,5 @@
 .portifolio {
-  background: linear-gradient(rgb(0,0,0) 20%, rgb(255, 255, 255, 0) 80%, rgb(0,0,0)), url(../../assets/fundo-banner.jpg) no-repeat;
+  background: linear-gradient(var(--bg-dark) 20%, rgb(255, 255, 255, 0) 80%, var(--bg-dark)), url(../../assets/fundo-banner.jpg) no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .portifolio h2 {
   text-align: center;
-  color: #6961FF;
+  color: var(--secondary-color);
 }
 
 .portifolio h3 {

@@ -1,6 +1,6 @@
 .sliderCard {
     font-size: 18px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../../../../assets/nathalia-brum-img.png);
+    background: linear-gradient(var(--bg-dark), var(--bg-dark)), url(../../../../assets/nathalia-brum-img.png);
     background-position: top;
     background-size: contain;
     
@@ -46,7 +46,7 @@
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    background-color: hsl(243, 100%, 69%);
+    background-color: var(--secondary-color);
     width: 50%;
     height: 2.5rem;
     border-radius: 20px;

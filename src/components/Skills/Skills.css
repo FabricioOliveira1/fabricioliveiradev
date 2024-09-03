@@ -29,15 +29,15 @@
 
 .skills .typescriptIcon g {
   mix-blend-mode: normal;
-  fill: #2C74B6;
+  fill: var(--tag-typescript-bg);
 }
 
 .skills .reactIcon {
-  fill: #5ED3F3;
+  fill: var(--tag-react-bg);
 }
 
 .skills .cssIcon {
-  fill: #1D3DD3;
+  fill: var(--tag-css-bg);
 }
 
 .skills .powerups {

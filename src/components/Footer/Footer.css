@@ -1,14 +1,45 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .footer-title {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .footer-title hr {
-    background-color: #ffffff;
+    background-color: var(--brand-light);
     flex: 1;
     margin-left: 1rem;
     border: none;
     height: 0.5px;
 }
+
+.footer .footer-menulinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.footer .footer-menulinksContainer ul {
+  padding: 0;
+}
+
+.footer .footer-menulinksContainer li {
+  list-style: none;
+}
+
+.footer .footer-contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+
+  margin-left: 6rem;
+}
+
+
