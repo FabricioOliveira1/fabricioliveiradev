@@ -1,0 +1,62 @@
+.skills {
+  background-color: #0B0A19;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  text-align: center;
+}
+
+.skills .mainSkills {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mainSkills div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .javascriptIcon {
+  margin-top: 0.35rem;
+}
+
+.skills .typescriptIcon g {
+  mix-blend-mode: normal;
+  fill: #2C74B6;
+}
+
+.skills .reactIcon {
+  fill: #5ED3F3;
+}
+
+.skills .cssIcon {
+  fill: #1D3DD3;
+}
+
+.skills .powerups {
+  background: linear-gradient(22deg, #242331 4%, #2F2E41 79%);
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.skills .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+
+  
+}
+
+.skills li {
+  font-size: 18px;
+  list-style: none;
+}

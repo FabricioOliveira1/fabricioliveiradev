@@ -1,0 +1,37 @@
+.about {
+  background: black;
+  padding-inline: 1.5rem;
+
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about h2 {
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 32px;
+}
+.about strong {
+  color: hsl(243, 100%, 69%);
+}
+.about p {
+  line-height: 1.5rem;
+}
+
+.about a{
+  text-decoration: underline dotted 2px;
+}
+
+.about img {
+  max-width: 20rem;
+}
+
+
+
+
