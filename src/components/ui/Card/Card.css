@@ -1,6 +1,6 @@
 .card {
   font-size: 18px;
-  background-color: #282736;
+  background-color: var(--text-dark);
   list-style: none;
   margin-bottom: 1.5rem;
   border-radius: 20px;
@@ -45,7 +45,7 @@
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  background-color: hsl(243, 100%, 69%);
+  background-color: var(--secondary-color);
   width: 50%;
   height: 2.5rem;
   border-radius: 20px;

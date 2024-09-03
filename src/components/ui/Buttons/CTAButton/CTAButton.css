@@ -1,8 +1,8 @@
 .CTAButton {
-  background-color: white;
-  color: black;
+  background-color: var(--brand-light);
+  color: var(--bg-dark);
   width: 12rem;
-  border: 1px black solid;
+  border: 1px var(--bg-dark) solid;
   border-radius: 40px;
   text-decoration: none;
   font-size: 16px;

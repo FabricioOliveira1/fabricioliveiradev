@@ -1,5 +1,5 @@
 .main {
-  background: linear-gradient(rgb(0,0,0) 20%, rgb(255, 255, 255, 0) 80%, rgb(0,0,0)), url(../../assets/fundo-banner.jpg) no-repeat;
+  background: linear-gradient(var(--bg-dark) 20%, rgb(255, 255, 255, 0) 80%, var(--bg-dark)), url(../../assets/fundo-banner.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
 
@@ -9,11 +9,11 @@
   justify-content: center;
   gap: 1.5rem;
 
-  color: white;
+  color: var(--brand-light);
   font-size: 24px;
 }
 .main strong, .main p{
-  color: hsl(243, 100%, 69%);
+  color: var(--secondary-color);
 }
 
 .main h1, p {

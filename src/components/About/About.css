@@ -1,5 +1,5 @@
 .about {
-  background: black;
+  background: var(--bg-dark);
   padding-inline: 1.5rem;
 
   font-size: 18px;
@@ -12,13 +12,13 @@
 }
 
 .about h2 {
-  color: white;
+  color: var(--brand-light);
   text-align: center;
   padding: 1.5rem;
   font-size: 32px;
 }
 .about strong {
-  color: hsl(243, 100%, 69%);
+  color: var(--secondary-color);
 }
 .about p {
   line-height: 1.5rem;
