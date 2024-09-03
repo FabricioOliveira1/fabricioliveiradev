@@ -1,9 +1,9 @@
 import './CTAButton.css'
 
-const CTABUtton = () => {
+const CTABUtton = ({text}) => {
   return (
     <a href='https://fabricio-oliveira-portifolio.vercel.app/' className='CTAButton'>
-      Veja Meus Projetos
+      {text}
     </a>
   )
 }

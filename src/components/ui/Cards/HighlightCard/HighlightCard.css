@@ -1,0 +1,55 @@
+.highlightCard {
+  font-size: 18px;
+  background-color: #282736;
+  list-style: none;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.highlightCard .listItem-img {
+  height: 60%;
+  overflow: hidden;
+} 
+
+.highlightCard p {
+  text-align: start;
+  line-height: 1.5rem;
+}
+
+.highlightCard .listItem-img img {
+  width: 20rem;
+  transform: translateY(-15%)
+}
+
+.highlightCard .listItem-description {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlightCard .highlightCard-buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.highlightCard .cardButton {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(243, 100%, 69%);
+  width: 50%;
+  height: 2.5rem;
+  border-radius: 20px;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+

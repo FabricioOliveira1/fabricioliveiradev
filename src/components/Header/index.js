@@ -1,4 +1,4 @@
-import WhatsappButton from '../Buttons/WhatsappButton';
+import WhatsappButton from '../ui/Buttons/WhatsappButton';
 import Nav from '../Nav';
 import './Header.css'
 

@@ -1,4 +1,4 @@
-import MenuButton from '../Buttons/MenuButton';
+import MenuButton from '../ui/Buttons/MenuButton';
 
 const Nav = () => {
   return (
