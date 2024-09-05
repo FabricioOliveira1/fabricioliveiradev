@@ -10,6 +10,16 @@ import Portifolio from './components/Portifolio';
 import nathlogo from './assets/nathalia-brum-img.png'
 import Footer from './components/Footer';
 
+const repos = () => {
+  return (
+   fetch('https://api.github.com/users/FabricioOliveira1/repos')
+    .then(data => {
+      return data.json()
+    })
+  )
+    
+}
+console.log(repos)
 
 const cardsInfo = [
   { projectName: 'nathaliabrum',
