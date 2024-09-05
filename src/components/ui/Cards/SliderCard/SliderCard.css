@@ -1,8 +1,9 @@
 .sliderCard {
     font-size: 18px;
-    background: linear-gradient(var(--bg-dark), var(--bg-dark)), url(../../../../assets/nathalia-brum-img.png);
+    background: url('https://raw.githubusercontent.com/FabricioOliveira1/FabricioOliveiraPortifolio/main/imagens/doctor-care-print.png');
     background-position: top;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     list-style: none;
     margin-bottom: 1.5rem;
@@ -32,6 +33,8 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 20rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 85%, rgba(64,146,168,0) 98%);
   }
   
   .sliderCard .sliderCard-buttonContainer {

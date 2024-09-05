@@ -17,17 +17,7 @@ const cardsInfo = [
     tags: ['javascript','react', 'css'],
     description: 'Site pessoal da profissional de Social Media Nathalia Brum',
     image: nathlogo
-  },{ projectName: 'nathaliabrum',
-    title:'Site Social Media Nathalia',
-    tags: ['javascript','react', 'css'],
-    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
-    image: nathlogo
-  },{ projectName: 'nathaliabrum',
-    title:'Site Social Media Nathalia',
-    tags: ['javascript','react', 'css'],
-    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
-    image: nathlogo
-  },
+  }
   
 ]
 

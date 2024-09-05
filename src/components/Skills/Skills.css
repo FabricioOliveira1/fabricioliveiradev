@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.skills strong {
+  color: var(--secondary-color);
+}
+
 .skills .mainSkills {
   display: flex;
   flex-direction: row;

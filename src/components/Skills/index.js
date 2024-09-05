@@ -9,7 +9,7 @@ import elementorIcon from '../../assets/elementor.png'
 const Skills = () => {
   return (
     <section className='skills'>
-      <h2>Minhas Skills e Power up's</h2>
+      <h2>Minhas Skills e <strong>Power up's</strong></h2>
       <div className='mainSkills'>
         <div>
           <svg className='reactIcon' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
