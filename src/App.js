@@ -9,17 +9,12 @@ import Portifolio from './components/Portifolio';
 
 import nathlogo from './assets/nathalia-brum-img.png'
 import Footer from './components/Footer';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const repos = () => {
-  return (
-   fetch('https://api.github.com/users/FabricioOliveira1/repos')
-    .then(data => {
-      return data.json()
-    })
-  )
-    
-}
-console.log(repos)
+
+
+
 
 const cardsInfo = [
   { projectName: 'nathaliabrum',
@@ -32,6 +27,18 @@ const cardsInfo = [
 ]
 
 function App() {
+
+  const [learningRepos, setlearningRepos] = useState([])
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/FabricioOliveira1/repos')
+      .then(data => {
+        setlearningRepos(...learningRepos, data.json())
+      })
+  },[])
+
+  console.log(learningRepos)
+
   return (
     <div>
       <Header />
@@ -39,7 +46,7 @@ function App() {
       <About />
       <Contact />
       <Skills />
-      <Portifolio cardsInfo={cardsInfo}/>
+      <Portifolio learningRepos={learningRepos} cardsInfo={cardsInfo}/>
       <Footer />
     </div>
   );

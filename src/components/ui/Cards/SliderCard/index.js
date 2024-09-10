@@ -2,7 +2,9 @@ import Tag from '../../Tags'
 import './SliderCard.css'
 import arrowLink from '../../../../assets/arrow-link.png'
 
-const SliderCard = () => {
+const SliderCard = (info) => {
+
+    console.log(info)
     return (
         <li className='sliderCard'>
             <div className='listItem-description'>
