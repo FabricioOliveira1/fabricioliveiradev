@@ -30,14 +30,17 @@ function App() {
 
   const [learningRepos, setlearningRepos] = useState([])
 
-  useEffect(() => {
-    fetch('https://api.github.com/users/FabricioOliveira1/repos')
-      .then(data => {
-        setlearningRepos(...learningRepos, data.json())
-      })
-  },[])
+   async function getRepositories() {
+    const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
+    if (response.status === 200) {
+      const obj = await response.json()
+      setlearningRepos(obj)
+    }
+  }
 
-  console.log(learningRepos)
+  useEffect(() => {
+    getRepositories()
+  } ,[])  
 
   return (
     <div>
