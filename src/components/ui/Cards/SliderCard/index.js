@@ -5,21 +5,28 @@ import { useState, useEffect } from 'react'
 
 const SliderCard = ({ info }) => {
   
-  const [languages, setLanguages] = useState([])
+  const [languages, setLanguages] = useState(['JavaScript', 'TypeScript', 'HTML'])
 
-  async function getLanguages() {
+  /*async function getLanguages() {
     const response = await fetch(info.languages_url)
     if (response.status === 200) {
       const obj = await response.json()
       setLanguages(Object.keys(obj))
     }
-  }
+  }*/
 
-  useEffect(() => {
+  const descriptionTeste = 'Essa é umja aplicação desenvolvida com React que consiste em fazer...'
+
+  /*useEffect(() => {
     getLanguages()
-  } ,[])  
+  } ,[]) */ 
+
+  if(descriptionTeste.includes('React')) {
+    setLanguages( ...languages, 'React')
+  }
+ 
   
-    
+    console.log(languages)
     return (
         <li className='sliderCard'>
             <div className='listItem-description'>
@@ -27,7 +34,7 @@ const SliderCard = ({ info }) => {
                 <div>
                     {languages.map(lang => <Tag currentTag={lang} />)}
                 </div>
-                <p>Essa é uma descrição ficticia para teste do componente.</p>
+                <p>{info.description}</p>
                 <div className='sliderCard-buttonContainer'>
                     <a className='cardButton' href='https://fabricio-oliveira-portifolio.vercel.app/'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="38" height="38" viewBox="0 0 64 64">

@@ -11,23 +11,25 @@ const Tag = ({currentTag}) => {
       SpanbackgroundColor = '#59D1F3';
       SpanTextColor = '#000000'
       break
-    case 'javascript':
+    case 'JavaScript':
       SpanbackgroundColor = '#EFD71F';
       SpanTextColor = '#000000'
       break
-    case 'css':
+    case 'CSS':
       SpanbackgroundColor = '#006EB8';
       SpanTextColor = '#ffffff'
       break
-    case 'typescript':
+    case 'TypeScript':
       SpanbackgroundColor = '#2D7AC8';
       SpanTextColor = '#ffffff'
       break
-    case 'html':
+    case 'HTML':
       SpanbackgroundColor = '#E54A1F' ; 
       SpanTextColor = '#ffffff'
       break;
     default:  
+      SpanbackgroundColor = '#ffffff'
+      SpanTextColor = '#000000'
   }
 
   return (

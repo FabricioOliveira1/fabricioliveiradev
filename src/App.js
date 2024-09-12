@@ -28,19 +28,19 @@ const cardsInfo = [
 
 function App() {
 
-  const [learningRepos, setlearningRepos] = useState([])
+  const [learningRepos, setlearningRepos] = useState([{name: 'Teste Repo', description: 'Essa é uma descrição em React', id: 1}])
 
-   async function getRepositories() {
+   /*async function getRepositories() {
     const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
     if (response.status === 200) {
       const obj = await response.json()
       setlearningRepos(obj)
     }
-  }
+  }*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     getRepositories()
-  } ,[])  
+  } ,[]) */ 
 
   return (
     <div>
