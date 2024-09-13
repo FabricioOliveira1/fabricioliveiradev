@@ -7,7 +7,7 @@ const Tag = ({currentTag}) => {
   let SpanTextColor = '#ffffff'
 
   switch (currentTag) {
-    case 'react':
+    case 'React':
       SpanbackgroundColor = '#59D1F3';
       SpanTextColor = '#000000'
       break

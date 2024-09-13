@@ -5,26 +5,27 @@ import { useState, useEffect } from 'react'
 
 const SliderCard = ({ info }) => {
   
-  const [languages, setLanguages] = useState(['JavaScript', 'TypeScript', 'HTML'])
+  const [languages, setLanguages] = useState([])
 
-  /*async function getLanguages() {
+  async function getLanguages() {
     const response = await fetch(info.languages_url)
     if (response.status === 200) {
       const obj = await response.json()
       setLanguages(Object.keys(obj))
     }
-  }*/
+  }
 
   const descriptionTeste = 'Essa é umja aplicação desenvolvida com React que consiste em fazer...'
 
-  /*useEffect(() => {
+  useEffect(() => {
     getLanguages()
-  } ,[]) */ 
+  } ,[])
 
-  if(descriptionTeste.includes('React')) {
-    setLanguages( ...languages, 'React')
-  }
- 
+  if(info.description.includes('React') && !languages.includes('React')) {
+    setLanguages(['React', ...languages])
+  } 
+
+  
   
     console.log(languages)
     return (
