@@ -13,7 +13,8 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-
+import { obj } from '../src/components/object.js'
+import { objetoDasLinguagens } from '../src/components/object.js'
 
 
 
@@ -29,56 +30,47 @@ const cardsInfo = [
 
 function App() {
 
-  const [learningRepos, setlearningRepos] = useState([ /*Aqui a lista de objetos precisa estar formatado apenas com os dados necessarios*/
-    {id: 1,
-      name: 'Teste Repo',
-      description: 'Essa é uma descrição em React',
-      languages: ['CSS', 'JavaScript', 'TypeScript'], /*precisa chegar aqui formatado se existe ou nao React*/
-      githubLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-      pageLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-      backgrounImage: arrowlink,
-      },
-    {id: 2,
-      name: 'Teste Repo 2',
-      description: 'Essa é uma descrição em React 2',
-      languages: ['React','CSS', 'JavaScript', 'TypeScript'],
-      githubLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-      pageLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-      backgrounImage: arrowlink,
-      }
-  ])
+    const [learningRepos, setlearningRepos] = useState([]);
 
-
-   {/*async function getDatafromAPIRepositories() {
-
-    AQUI FICARÁ RESPONSAVEL PELA LOGICA DE BUSCA NOS REPOSITÓRIOS E FORMATAÇÃO
-    SERÁ NECESSARIO FORMATAR TAGS E VERIFICAR SE EXISTE REACT NO TEXTO DE DESCRIPTION
-
-    const []
-
-    const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
+    /*const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
     if (response.status === 200) {
       const obj = await response.json()
-      setlearningRepos(obj)
-  }
+      */
+      const repositorios = obj.map(repo => {
 
-      
-  if(learningRepos.description.includes('React') && !learningRepos.description.includes('React')) {
-    setLanguages(['React', ...languages])
-  }
-  
-  
-  
-  */}
+        function getLanguages(url, description = 'React') {
 
-  {/*async function getLanguages(repo) {
-    const response = await fetch(info.languages_url)
-    if (response.status === 200) {
-      const obj = await response.json()
-      setLanguages(Object.keys(obj))
-  }
+            let languages = [] 
+            /*
+            const response = await fetch(url)
+            if (response.status === 200) {
+              const obj = await response.json()
+              const languageList = (Object.keys(obj))*/
+              const languageList = Object.keys(objetoDasLinguagens)
+              
+            
+            if(description.includes('React') && !languageList.includes('React')) {
+              languages = ['React', ...languageList]
+            }
+            return languages
+            
+        }
 
-  }*/}
+        return(
+          {
+            id: repo.id,
+            name: repo.name,
+            description: repo.description || '',
+            languages_url: repo.languages_url,
+            languages: getLanguages(repo.languages_url, repo.description),
+            githubLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
+            pageLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
+            backgrounImage: arrowlink,
+          }
+        )
+      })
+
+      setlearningRepos(repositorios)
 
   return (
     <div>
