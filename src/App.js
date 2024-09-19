@@ -13,10 +13,7 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-import { obj } from '../src/components/object.js'
-import { objetoDasLinguagens } from '../src/components/object.js'
-
-
+/*import { obj } from '../src/components/object.js'*/
 
 const cardsInfo = [
   { projectName: 'nathaliabrum',
@@ -32,29 +29,12 @@ function App() {
 
     const [learningRepos, setlearningRepos] = useState([]);
 
-    /*const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
+    async function handleRepositorios () {
+      const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
     if (response.status === 200) {
       const obj = await response.json()
-      */
+      
       const repositorios = obj.map(repo => {
-
-        function getLanguages(url, description = 'React') {
-
-            let languages = [] 
-            /*
-            const response = await fetch(url)
-            if (response.status === 200) {
-              const obj = await response.json()
-              const languageList = (Object.keys(obj))*/
-              const languageList = Object.keys(objetoDasLinguagens)
-              
-            
-            if(description.includes('React') && !languageList.includes('React')) {
-              languages = ['React', ...languageList]
-            }
-            return languages
-            
-        }
 
         return(
           {
@@ -62,15 +42,24 @@ function App() {
             name: repo.name,
             description: repo.description || '',
             languages_url: repo.languages_url,
-            languages: getLanguages(repo.languages_url, repo.description),
             githubLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
             pageLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
             backgrounImage: arrowlink,
           }
         )
+        
       })
-
       setlearningRepos(repositorios)
+    }
+    }
+
+    
+
+      useEffect(() => {
+        handleRepositorios()
+      },[])
+
+      
 
   return (
     <div>

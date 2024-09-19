@@ -1,15 +1,46 @@
 import Tag from '../../Tags'
 import './SliderCard.css'
 import arrowLink from '../../../../assets/arrow-link.png'
+import { useEffect, useState } from 'react'
+
+/*import { objetoDasLinguagens } from '../../../object.js'*/
 
 const SliderCard = ({ info }) => {
+
+    const [languages,setLanguages] = useState([])
+
+  useEffect(() => {
+    getLanguages(info.languages_url, info.description)
+  }, [])
+
+  
+
+  async function getLanguages(url, description) {
+            
+            const response = await fetch(url)
+            if (response.status === 200) {
+              const obj = await response.json()
+              const languageList = (Object.keys(obj))
+              
+              
+            if(description.includes('React') && !languageList.includes('React')) {
+              setLanguages(['React', ...languageList])
+              }              
+              else {
+                setLanguages(languageList)
+              }
+            }
+            }
+              
+
+        console.log(languages)
       
     return (
         <li className='sliderCard'>
             <div className='listItem-description'>
                 <h4>{info.name}</h4>
                 <div>
-                    {info.languages.map(lang => <Tag currentTag={lang} />)}
+                    {languages.map(lang => <Tag currentTag={lang} />)}
                 </div>
                 <p>{info.description}</p>
                 <div className='sliderCard-buttonContainer'>
