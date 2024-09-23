@@ -7,40 +7,15 @@ import { useEffect, useState } from 'react'
 
 const SliderCard = ({ info }) => {
 
-    const [languages,setLanguages] = useState([])
+  console.log(info.backgroundImage)   
 
-  useEffect(() => {
-    getLanguages(info.languages_url, info.description)
-  }, [])
 
-  
-
-  async function getLanguages(url, description) {
-            
-            const response = await fetch(url)
-            if (response.status === 200) {
-              const obj = await response.json()
-              const languageList = (Object.keys(obj))
-              
-              
-            if(description.includes('React') && !languageList.includes('React')) {
-              setLanguages(['React', ...languageList])
-              }              
-              else {
-                setLanguages(languageList)
-              }
-            }
-            }
-              
-
-        console.log(languages)
-      
     return (
-        <li className='sliderCard'>
+        <li className='sliderCard' style={{backgroundImage: url(`../../components/Repositorios/Repoimages/${info.backgroundImage}`)}}>
             <div className='listItem-description'>
                 <h4>{info.name}</h4>
                 <div>
-                    {languages.map(lang => <Tag currentTag={lang} />)}
+                    {info.languages.map(lang => <Tag key={lang} currentTag={lang} />)}
                 </div>
                 <p>{info.description}</p>
                 <div className='sliderCard-buttonContainer'>

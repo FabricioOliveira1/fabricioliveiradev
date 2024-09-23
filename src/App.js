@@ -1,15 +1,17 @@
+import './App.css'
+
 import About from './components/About';
 import Header from './components/Header';
 import Main from './components/Main';
-
-import './App.css'
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Portifolio from './components/Portifolio';
+import Footer from './components/Footer';
 
 import nathlogo from './assets/nathalia-brum-img.png'
 import arrowlink from './assets/arrow-link.png'
-import Footer from './components/Footer';
+import learningRepos from './components/Repositorios'
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -27,51 +29,45 @@ const cardsInfo = [
 
 function App() {
 
-    const [learningRepos, setlearningRepos] = useState([]);
 
-    async function handleRepositorios () {
+    /*async function handleRepositorios () {
       const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
     if (response.status === 200) {
       const obj = await response.json()
+    }*/
       
-      const repositorios = obj.map(repo => {
+      const repos = learningRepos.map(repo => {
+
+        
 
         return(
           {
             id: repo.id,
             name: repo.name,
-            description: repo.description || '',
-            languages_url: repo.languages_url,
-            githubLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-            pageLink: 'https://fabricio-oliveira-portifolio.vercel.app/',
-            backgrounImage: arrowlink,
+            description: repo.description,
+            languages: repo.languages,
+            githubLink: repo.githubLink,
+            pageLink: repo.pageLink,
+            backgrounImage: repo.backgroundImage,
           }
         )
         
       })
-      setlearningRepos(repositorios)
-    }
-    }
-
     
+      return (
+        <div>
+          <Header />
+          <Main />
+          <About />
+          <Contact />
+          <Skills />
+          <Portifolio learningRepos={repos} cardsInfo={cardsInfo}/>
+          <Footer />
+        </div>
+      );
+    }
 
-      useEffect(() => {
-        handleRepositorios()
-      },[])
+  
 
-      
-
-  return (
-    <div>
-      <Header />
-      <Main />
-      <About />
-      <Contact />
-      <Skills />
-      <Portifolio learningRepos={learningRepos} cardsInfo={cardsInfo}/>
-      <Footer />
-    </div>
-  );
-}
 
 export default App;
