@@ -1,21 +1,22 @@
 import Tag from '../../Tags'
 import './SliderCard.css'
 import arrowLink from '../../../../assets/arrow-link.png'
-import { useEffect, useState } from 'react'
+
+
 
 /*import { objetoDasLinguagens } from '../../../object.js'*/
 
 const SliderCard = ({ info }) => {
-
-  console.log(info.backgroundImage)   
+  
+  console.log(info.backImage)
 
 
     return (
-        <li className='sliderCard' style={{backgroundImage: url(`../../components/Repositorios/Repoimages/${info.backgroundImage}`)}}>
+        <li className='sliderCard' style={{background: `url(../../../Repositorios/RepoImages/${info.backImage})`}}>
             <div className='listItem-description'>
                 <h4>{info.name}</h4>
                 <div>
-                    {info.languages.map(lang => <Tag key={lang} currentTag={lang} />)}
+                    {info.languages.map(lang => <Tag key={lang} currentTag={lang} />) }
                 </div>
                 <p>{info.description}</p>
                 <div className='sliderCard-buttonContainer'>

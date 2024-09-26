@@ -5,6 +5,7 @@ import SliderCard from '../ui/Cards/SliderCard'
 
 const Portifolio = ({ learningRepos, cardsInfo }) => {
 
+  
 
   return (
     <section className='portifolio'>

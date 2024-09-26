@@ -8,7 +8,7 @@ const learningRepos = [
         languages: ['HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/AluraBooks',
         pageLink: 'alura-books-xi-one.vercel.app',
-        backgroundImage: 'alura-books.JPG',
+        backImage: 'alura-books.png',
       },
     
     

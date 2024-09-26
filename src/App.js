@@ -9,11 +9,7 @@ import Portifolio from './components/Portifolio';
 import Footer from './components/Footer';
 
 import nathlogo from './assets/nathalia-brum-img.png'
-import arrowlink from './assets/arrow-link.png'
 import learningRepos from './components/Repositorios'
-
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 /*import { obj } from '../src/components/object.js'*/
 
@@ -37,8 +33,7 @@ function App() {
     }*/
       
       const repos = learningRepos.map(repo => {
-
-        
+                
 
         return(
           {
@@ -48,7 +43,7 @@ function App() {
             languages: repo.languages,
             githubLink: repo.githubLink,
             pageLink: repo.pageLink,
-            backgrounImage: repo.backgroundImage,
+            backImage: repo.backImage,
           }
         )
         
