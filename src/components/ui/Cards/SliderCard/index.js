@@ -12,7 +12,9 @@ const SliderCard = ({ info }) => {
 
 
     return (
-        <li className='sliderCard' style={{background: `url(../../../Repositorios/RepoImages/${info.backImage})`}}>
+        <li className='sliderCard' style={{
+          background: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})`,
+          }}>
             <div className='listItem-description'>
                 <h4>{info.name}</h4>
                 <div>
