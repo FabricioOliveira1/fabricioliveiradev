@@ -7,8 +7,6 @@ import arrowLink from '../../../../assets/arrow-link.png'
 /*import { objetoDasLinguagens } from '../../../object.js'*/
 
 const SliderCard = ({ info }) => {
-  
-  console.log(info.backImage)
 
 
     return (
