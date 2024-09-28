@@ -2,7 +2,7 @@ import './CTAButton.css'
 
 const CTABUtton = ({text}) => {
   return (
-    <a href='https://fabricio-oliveira-portifolio.vercel.app/' className='CTAButton'>
+    <a href='#portifolio' className='CTAButton'>
       {text}
     </a>
   )

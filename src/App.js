@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 
 import nathlogo from './assets/nathalia-brum-img.png'
 import learningRepos from './components/Repositorios'
+import OpenNav from './components/OpenNav';
 
 /*import { obj } from '../src/components/object.js'*/
 

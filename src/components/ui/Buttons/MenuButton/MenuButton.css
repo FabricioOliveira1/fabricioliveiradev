@@ -1,3 +1,10 @@
-.menuButton svg{
+
+.menuButton {
+  background-color: var(--bg-dark);
+  border: none;
+}
+
+.menuButton svg {
   fill: var(--brand-light);
+  background-color: var(--bg-dark);
 }

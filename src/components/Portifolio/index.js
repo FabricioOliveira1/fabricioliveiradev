@@ -8,7 +8,7 @@ const Portifolio = ({ learningRepos, cardsInfo }) => {
   
 
   return (
-    <section className='portifolio'>
+    <section id='portifolio' className='portifolio'>
       <h2>Projetos</h2>
       <div className='personalProjects'>
         <h3>Destaques</h3>

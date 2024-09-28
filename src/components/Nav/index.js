@@ -1,9 +1,11 @@
 import MenuButton from '../ui/Buttons/MenuButton';
 
-const Nav = () => {
+const Nav = ({ handleMenuOpen }) => {
+
+
   return (
     <nav className='nav'>
-      <MenuButton />
+      <MenuButton  handleMenuOpen={handleMenuOpen}/>
     </nav>
   )
 }
