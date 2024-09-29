@@ -12,6 +12,7 @@ const Header = () => {
 
   function handleMenuOpen() {
     setIsMenuOpen(!isMenuOpen)
+    setHeaderHeight('100vh')
   }
 
     let lastPosition = 0;
@@ -26,27 +27,19 @@ const Header = () => {
           console.log('↓↓↓')
           console.log(currentPosition)
           setIsHeaderVisible(false)
-          
-      }
-       if (!isHeaderVisible && lastPosition > currentPosition) {
-           console.log('↑↑↑'); 
-           console.log(currentPosition)
-           setIsHeaderVisible(true)
-           
+      } else {
+        setIsHeaderVisible(true)
       }
       lastPosition = currentPosition
-
-      
-
     } 
       
     useEffect(() => {
       document.addEventListener('scroll', isScrolling);
       
-    },[isHeaderVisible])
+    },[])
 
    useEffect(() => {
-    isHeaderVisible ? setHeaderHeight('4rem') : setHeaderHeight('0')
+    isHeaderVisible ? setHeaderHeight('5rem') : setHeaderHeight('0')
   },[isHeaderVisible]) 
 
   return (
