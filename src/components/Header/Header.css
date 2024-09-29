@@ -8,6 +8,7 @@
   transition: 0.3s;
 
   padding-block: 0;
+  z-index: 20;
 }
 .header-container {
   display: flex;

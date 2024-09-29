@@ -8,38 +8,39 @@ const Header = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
-  const [headerHeight, setHeaderHeight] = useState('0vh') 
+  const [headerHeight, setHeaderHeight] = useState('5rem') 
 
   function handleMenuOpen() {
     setIsMenuOpen(!isMenuOpen)
-    setHeaderHeight('100vh')
   }
 
-    let lastPosition = 0;
-    console.log('lastposition: ', lastPosition)
-
-    function isScrolling() {
-        
-        const currentPosition = window.scrollY;
-        console.log(currentPosition)
-
-        if(isHeaderVisible && lastPosition < currentPosition) {
-          console.log('↓↓↓')
-          console.log(currentPosition)
-          setIsHeaderVisible(false)
-      } else {
-        setIsHeaderVisible(true)
-      }
-      lastPosition = currentPosition
-    } 
+  let lastPosition = 0;
+  function isScrolling() {
+      const currentPosition = window.scrollY;
       
-    useEffect(() => {
-      document.addEventListener('scroll', isScrolling);
-      
-    },[])
+      if(isHeaderVisible && lastPosition < currentPosition) {
+        setIsHeaderVisible(false)
+    } else {
+      setIsHeaderVisible(true)
+    }
+    lastPosition = currentPosition
+  } 
 
-   useEffect(() => {
+  useEffect(() => {
+    if (isMenuOpen){
+      setHeaderHeight('100vh')
+    } else {
+      setHeaderHeight('5rem')
+    }
+  },[isMenuOpen])
+    
+  useEffect(() => {
+    document.addEventListener('scroll', isScrolling);
+  },[])
+
+  useEffect(() => {
     isHeaderVisible ? setHeaderHeight('5rem') : setHeaderHeight('0')
+    
   },[isHeaderVisible]) 
 
   return (
