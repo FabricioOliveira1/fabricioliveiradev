@@ -37,3 +37,6 @@ body p, h1, h2, h3, a ul, li{
 body svg {
   fill: var(--brand-light)
 }
+body section {
+  padding-block: 5em;
+}

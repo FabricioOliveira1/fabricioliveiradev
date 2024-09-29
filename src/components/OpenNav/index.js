@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import Contact from '../Contact';
 import './OpenNav.css'
 
-const OpenNav = ({ isOpen }) => {
+const OpenNav = ({ isMenuOpen }) => {
 
   const [menuHeight, setMenuHeight] = useState('0vh') 
 
   useEffect(() => {
-    isOpen ? setMenuHeight('100vh') : setMenuHeight('0')
-  }, [isOpen])
+    isMenuOpen ? setMenuHeight('100vh') : setMenuHeight('0')
+  }, [isMenuOpen])
 
   return (
     <div className='openNav' style={{ 'height':`${menuHeight}`}}>

@@ -1,4 +1,4 @@
-.main {
+.main {  
   background: linear-gradient(var(--bg-dark) 20%, rgb(255, 255, 255, 0) 80%, var(--bg-dark)), url(../../assets/fundo-banner.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
