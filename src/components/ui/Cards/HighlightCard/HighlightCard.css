@@ -13,17 +13,15 @@
 
 .highlightCard .listItem-img {
   height: 60%;
-  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
+
 
 .highlightCard p {
   text-align: start;
   line-height: 1.5rem;
-}
-
-.highlightCard .listItem-img img {
-  width: 20rem;
-  transform: translateY(-15%)
 }
 
 .highlightCard .listItem-description {

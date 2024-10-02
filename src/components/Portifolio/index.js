@@ -3,9 +3,8 @@ import HighlightCard from '../ui/Cards/HighlightCard'
 import SliderCard from '../ui/Cards/SliderCard'
 
 
-const Portifolio = ({ learningRepos, cardsInfo }) => {
+const Portifolio = ({ learningRepos, highlightrepos }) => {
 
-  
 
   return (
     <section id='portifolio' className='portifolio'>
@@ -13,7 +12,9 @@ const Portifolio = ({ learningRepos, cardsInfo }) => {
       <div className='personalProjects'>
         <h3>Destaques</h3>
         <ul className='personalProjects-list'>
-          {cardsInfo.map((card) =>  <HighlightCard key={card.projectName} info={card} /> )}
+          {highlightrepos.map((repo) => 
+           <HighlightCard key={repo.id} info={repo} /> 
+          )}
         </ul>
       </div>
       <div className='learningProjects'>

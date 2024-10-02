@@ -8,19 +8,9 @@ import Skills from './components/Skills';
 import Portifolio from './components/Portifolio';
 import Footer from './components/Footer';
 
-import nathlogo from './assets/nathalia-brum-img.png'
-import learningRepos from './components/Repositorios'
-import { useEffect } from 'react';
+import {learningRepos, personalRepos} from './components/Repositorios/index.js' ;
 
-const cardsInfo = [
-  { projectName: 'nathaliabrum',
-    title:'Site Social Media Nathalia',
-    tags: ['javascript','react', 'css'],
-    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
-    image: nathlogo
-  }
-  
-]
+
 
 function App() {
   /*async function handleRepositorios () {
@@ -28,14 +18,34 @@ function App() {
   if (response.status === 200) {
     const obj = await response.json()
   }*/
+
        
-    const repos = learningRepos.map(repo => {          
+      
+       
+    const repos = learningRepos.map(repo => {   
+      
       return(
         {
           id: repo.id,
           name: repo.name,
           description: repo.description,
           languages: repo.languages,
+          githubLink: repo.githubLink,
+          pageLink: repo.pageLink,
+          backImage: repo.backImage,
+        }
+      )
+    })
+
+    
+
+    const highlightrepos = personalRepos.map(repo => {          
+      return(
+        {
+          id: repo.id,
+          name: repo.name,
+          description: repo.description,
+          languages: repo.tags,
           githubLink: repo.githubLink,
           pageLink: repo.pageLink,
           backImage: repo.backImage,
@@ -50,7 +60,7 @@ function App() {
         <About />
         <Contact />
         <Skills />
-        <Portifolio learningRepos={repos} cardsInfo={cardsInfo}/>
+        <Portifolio learningRepos={repos} highlightrepos={highlightrepos}/>
         <Footer />
       </div>
     );

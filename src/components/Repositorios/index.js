@@ -1,6 +1,20 @@
 /*Imagens tem que estar no tamanho de 352px*/
 
-const learningRepos = [
+
+
+export const personalRepos = [
+  { id: 1,
+    projectName: 'nathaliabrum',
+    title:'Site Social Media Nathalia',
+    tags: ['JavaScript','React', 'CSS'],
+    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
+    backImage: 'nathalia-brum-img.png',
+  }
+]
+
+
+
+export const learningRepos = [
     {
         id: 1,
         name: 'Alura Books',
@@ -55,10 +69,7 @@ const learningRepos = [
         pageLink: 'https://calculadora-alpha-snowy.vercel.app/',
         backImage: 'calculadora.png',
       }
-      
-
-    
-    
 ]
 
-export default learningRepos;
+
+

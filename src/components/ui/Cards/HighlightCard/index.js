@@ -4,17 +4,22 @@ import arrowLink from '../../../../assets/arrow-link.png'
 
 
 const HighlightCard = ({info}) => {
+
+  console.log(info.languages)
   
     return (
     
     <li className='highlightCard'>
-      <div className='listItem-img'>
-        <img src={info.image} alt='Imagem do site' />
+      <div className='listItem-img' style={{
+          backgroundImage: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})
+          `,
+          }}>
+        
       </div>
       <div className='listItem-description'>
-        <h4>{info.title}</h4>
+        <h4>{info.name}</h4>
         <div>
-          {info.tags.map(tag => <Tag key={tag} currentTag={tag}/>)}
+          {info.languages.map(tag => <Tag key={tag} currentTag={tag}/>)}
         </div>
         <p>{info.description}</p>
         <div className='highlightCard-buttonContainer'>
