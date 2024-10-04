@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nav .navLinks {
+    display: none;
+}
+
+.nav .navLinks-list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+} 
+
+.nav .navLinks-listItem {
+    padding: 1rem;
+
+}
+
+.nav .navLinks-listItem a {
+    color: var(--brand-light);
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .nav .navLinks {
+        display: block;
+    }
+}
+

@@ -8,3 +8,9 @@
   fill: var(--brand-light);
   background-color: var(--bg-dark);
 }
+
+@media (min-width: 1024px) {
+  .menuButton {
+      display: none;
+  }
+}
