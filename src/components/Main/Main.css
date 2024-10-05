@@ -12,6 +12,13 @@
   color: var(--brand-light);
   font-size: 24px;
 }
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
 .main strong, .main p{
   color: var(--secondary-color);
 }
@@ -29,3 +36,21 @@
   max-width: 20rem;
 }
 
+@media (min-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+    ;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .mainContainer h1 {
+    text-align: left;
+  }
+}

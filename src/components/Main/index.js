@@ -5,9 +5,11 @@ import astronauta from '../../assets/undraw_launch_day_4e04.svg'
 const Main = () => {
   return (
     <section id="home" className='main'>
-      <h1>Olá eu sou<br/> <strong>Fabricio Oliveira</strong> Desenvolvedor<br/> Front-end</h1>
-      <p>Web Developer</p>
-      <CTABUtton text={'Veja Meus Projetos'}/> 
+      <div className="mainContainer">
+        <h1>Olá eu sou<br/> <strong>Fabricio Oliveira<br/></strong> Desenvolvedor<br/> Front-end</h1>
+        <p>Web Developer</p>
+        <CTABUtton text={'Veja Meus Projetos'}/> 
+      </div>
       <img src={astronauta} alt='Astronauta no espaço'/>
     </section>
   )
