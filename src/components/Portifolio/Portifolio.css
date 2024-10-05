@@ -46,6 +46,30 @@
 
 
 
+@media (min-width: 1024px) {
+  .portifolio .personalProjects-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .portifolio .learningProjects ul{
+    overflow-x: scroll;
+  }
+  .portifolio .learningProjects ul:hover::-webkit-scrollbar {
+    display: initial;
+    background-color: var(--text-dark);
+    height: .7rem;
+  }
+  .portifolio .learningProjects ul::-webkit-scrollbar-thumb   {
+    background-color: var(--brand-light);
+    border-radius: 20px;
+  }
+  
+}
+
+
+
 
 
 

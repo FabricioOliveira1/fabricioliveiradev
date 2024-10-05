@@ -22,7 +22,7 @@
 }
 .about p {
   line-height: 1.5rem;
-  width: 30rem;
+  width: 25rem;
 }
 
 .about a{
@@ -35,12 +35,11 @@
 
 @media (min-width: 1024px) {
   .aboutContainer {
-    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 5rem;
   }
   .aboutContainer-reverse i {
     order: 2;

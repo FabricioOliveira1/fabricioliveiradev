@@ -18,7 +18,7 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
         </ul>
       </div>
       <div className='learningProjects'>
-        <h3>Cursos</h3>
+        <h3>Projetos de Cursos</h3>
         <ul>
           {learningRepos.map((repo) =>  <SliderCard key={repo.id}  info={repo} /> )}
         </ul>

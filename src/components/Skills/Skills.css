@@ -56,7 +56,6 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 0;
-
   
 }
 
@@ -64,3 +63,11 @@
   font-size: 18px;
   list-style: none;
 }
+
+@media (min-width:1024px) {
+  .skills .powerups {
+    margin-inline: auto;
+    width: 50rem;
+  }
+  
+} 
