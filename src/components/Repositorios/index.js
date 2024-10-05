@@ -9,13 +9,6 @@ export const personalRepos = [
     tags: ['JavaScript','React', 'CSS'],
     description: 'Site pessoal da profissional de Social Media Nathalia Brum',
     backImage: 'nathalia-brum-img.png',
-  },
-  { id: 2,
-    projectName: 'nathaliabrum',
-    title:'Site Social Media Nathalia',
-    tags: ['JavaScript','React', 'CSS'],
-    description: 'Site pessoal da profissional de Social Media Nathalia Brum',
-    backImage: 'nathalia-brum-img.png',
   }
 ]
 
