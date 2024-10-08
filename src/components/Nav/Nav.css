@@ -24,6 +24,9 @@
     color: var(--brand-light);
     text-decoration: none;
 }
+.nav .navLinks-listItem a:hover {
+  text-shadow: 2px 2px 8px var(--brand-light);
+}
 
 @media (min-width: 1024px) {
     .nav .navLinks {
