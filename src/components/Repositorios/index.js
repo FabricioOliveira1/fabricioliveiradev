@@ -8,6 +8,8 @@ export const personalRepos = [
     title:'Site Social Media Nathalia',
     tags: ['JavaScript','React', 'CSS'],
     description: 'Site pessoal da profissional de Social Media Nathalia Brum',
+    githubLink: 'https://github.com/FabricioOliveira1/nathbrum-site',
+    pageLink: 'https://nathbrum-site.vercel.app/',
     backImage: 'nathalia-brum-img.png',
   }
 ]

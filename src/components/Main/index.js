@@ -10,7 +10,7 @@ const Main = () => {
         <p>Web Developer</p>
         <CTABUtton text={'Veja Meus Projetos'}/> 
       </div>
-      <img src={astronauta} alt='Astronauta no espaço'/>
+      <img className="mainImage" src={astronauta} alt='Astronauta no espaço'/>
     </section>
   )
 }

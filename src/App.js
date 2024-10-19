@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 
 import {learningRepos, personalRepos} from './components/Repositorios/index.js' ;
 
+import scrollreveal from 'scrollreveal';
+import { useEffect } from 'react';
+
 
 
 function App() {
@@ -17,7 +20,33 @@ function App() {
     const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
   if (response.status === 200) {
     const obj = await response.json()
-  }*/
+  }
+    scrollreveal({
+      origin: 'start',
+      distance: '200px',
+      duration: 1500,
+  }).reveal(`
+  
+mainImage
+
+  .mainContainer`);*/
+
+  useEffect(() => {
+    scrollreveal({reset: true})
+    scrollreveal().reveal('.mainContainer', { origin: 'left', distance: '500px', duration: 300, })
+    scrollreveal().reveal('.mainImage', { origin: 'left', distance: '-500px', duration: 300, })
+    scrollreveal().reveal('.aboutContainer', { origin: 'left', distance: '500px', duration: 300, })
+    scrollreveal().reveal('.aboutContainer-reverse', { origin: 'left', distance: '-500px', duration: 300, })
+    scrollreveal().reveal('.skills', {duration: 300})
+    scrollreveal().reveal('.mainSkills', {origin: 'top', distance: '100px', duration: 1000})
+    scrollreveal().reveal('.powerups', {origin: 'bottom', distance: '100px', duration: 1000})
+    scrollreveal().reveal('.highlightCard', { origin: 'right', distance: '500px', duration: 300, })
+    scrollreveal().reveal('.sliderCard', { origin: 'right', distance: '500px', duration: 300, })
+  },[])
+
+  
+  
+
 
        
       
