@@ -1,7 +1,6 @@
 .header {
   background: var(--bg-dark);
   position: fixed;
-  width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;

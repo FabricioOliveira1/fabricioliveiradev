@@ -29,6 +29,7 @@
 body {
   background: var(--bg-dark);
   -webkit-font-smoothing: antialiased;
+  
 }
 
 body p, h1, h2, h3, a ul, li{
