@@ -32,7 +32,7 @@ mainImage
   .mainContainer`);*/
 
   useEffect(() => {
-    scrollreveal({reset: true})
+    scrollreveal({reset: false})
     scrollreveal().reveal('.mainContainer', { origin: 'left', distance: '500px', duration: 300, })
     scrollreveal().reveal('.mainImage', { origin: 'left', distance: '-500px', duration: 300, })
     scrollreveal().reveal('.aboutContainer', { origin: 'left', distance: '500px', duration: 300, })
