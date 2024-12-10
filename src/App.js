@@ -10,9 +10,6 @@ import Footer from './components/Footer';
 
 import {learningRepos, personalRepos} from './components/Repositorios/index.js' ;
 
-import scrollreveal from 'scrollreveal';
-import { useEffect } from 'react';
-
 
 
 function App() {
@@ -31,18 +28,7 @@ mainImage
 
   .mainContainer`);*/
 
-  useEffect(() => {
-    scrollreveal({reset: false})
-    scrollreveal().reveal('.mainContainer', { origin: 'left', distance: '500px', duration: 300, })
-    scrollreveal().reveal('.mainImage', { origin: 'left', distance: '-500px', duration: 300, })
-    scrollreveal().reveal('.aboutContainer', { origin: 'left', distance: '500px', duration: 300, })
-    scrollreveal().reveal('.aboutContainer-reverse', { origin: 'left', distance: '-500px', duration: 300, })
-    scrollreveal().reveal('.skills', {duration: 300})
-    scrollreveal().reveal('.mainSkills', {origin: 'top', distance: '100px', duration: 1000})
-    scrollreveal().reveal('.powerups', {origin: 'bottom', distance: '100px', duration: 1000})
-    scrollreveal().reveal('.personalProjects', { origin: 'right', distance: '500px', duration: 300, })
-    scrollreveal().reveal('.learningProjects', { origin: 'left', distance: '50px', duration: 300, })
-  },[])
+  
 
   
   

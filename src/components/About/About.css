@@ -22,7 +22,7 @@
 }
 .about p {
   line-height: 1.5rem;
-  width: 25rem;
+  
 }
 
 .about a{
@@ -30,7 +30,7 @@
 }
 
 .about img {
-  max-width: 20rem;
+  max-width: 15rem;
 }
 
 .aboutContainer {

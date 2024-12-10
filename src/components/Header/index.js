@@ -18,7 +18,7 @@ const Header = () => {
   function isScrolling() {
       const currentPosition = window.scrollY;
       
-      if(isHeaderVisible && lastPosition < currentPosition) {
+      if(isHeaderVisible && lastPosition < currentPosition && currentPosition > 300) {
         setIsHeaderVisible(false)
     } else {
       setIsHeaderVisible(true)
