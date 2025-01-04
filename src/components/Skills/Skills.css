@@ -1,0 +1,73 @@
+.skills {
+  background-color: #0B0A19;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  text-align: center;
+}
+
+.skills strong {
+  color: var(--secondary-color);
+}
+
+.skills .mainSkills {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mainSkills div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .javascriptIcon {
+  margin-top: 0.35rem;
+}
+
+.skills .typescriptIcon g {
+  mix-blend-mode: normal;
+  fill: var(--tag-typescript-bg);
+}
+
+.skills .reactIcon {
+  fill: var(--tag-react-bg);
+}
+
+.skills .cssIcon {
+  fill: var(--tag-css-bg);
+}
+
+.skills .powerups {
+  background: linear-gradient(22deg, #242331 4%, #2F2E41 79%);
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.skills .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  
+}
+
+.skills li {
+  font-size: 18px;
+  list-style: none;
+}
+
+@media (min-width:1024px) {
+  .skills .powerups {
+    margin-inline: auto;
+    width: 50rem;
+  }
+  
+} 
