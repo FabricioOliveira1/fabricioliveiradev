@@ -12,30 +12,7 @@ import {learningRepos, personalRepos} from './components/Repositorios/index.js' 
 
 
 
-function App() {
-  /*async function handleRepositorios () {
-    const response = await fetch('https://api.github.com/users/FabricioOliveira1/repos')
-  if (response.status === 200) {
-    const obj = await response.json()
-  }
-    scrollreveal({
-      origin: 'start',
-      distance: '200px',
-      duration: 1500,
-  }).reveal(`
-  
-mainImage
-
-  .mainContainer`);*/
-
-  
-
-  
-  
-
-
-       
-      
+function App() {      
        
     const repos = learningRepos.map(repo => {   
       

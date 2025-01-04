@@ -10,12 +10,12 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
     <section id='portifolio' className='portifolio'>
       <h2>Projetos</h2>
       <div className='personalProjects'>
-        <h3>Destaques</h3>
+        {/* <h3>Destaques</h3>
         <ul className='personalProjects-list'>
           {highlightrepos.map((repo) => 
            <HighlightCard key={repo.id} info={repo} /> 
           )}
-        </ul>
+        </ul> */}
       </div>
       <div className='learningProjects'>
         <h3>Projetos de Cursos</h3>
