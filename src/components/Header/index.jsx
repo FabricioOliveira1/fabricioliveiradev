@@ -1,8 +1,29 @@
 import WhatsappButton from '../ui/Buttons/WhatsappButton';
 import Nav from '../Nav';
-import './Header.css'
 import OpenNav from '../OpenNav';
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+
+
+const StyledHeader = styled.section`
+
+height: ${props => props.$headerHeight};
+background: ${props => props.theme.colors.bgDark};
+position: fixed;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+
+padding-block: 0;
+z-index: 20;
+`
+const StyledContainer = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0.5rem 1.5rem;
+` 
 
 const Header = () => {
 
@@ -44,14 +65,13 @@ const Header = () => {
   },[isHeaderVisible]) 
 
   return (
-    <section className="header" style={{'height' : `${headerHeight}`}}>
-      <div className='header-container' >
+    <StyledHeader $headerHeight={headerHeight}>
+      <StyledContainer>
         <WhatsappButton />
         <Nav handleMenuOpen={handleMenuOpen} />
-      </div>
-      <OpenNav isMenuOpen={isMenuOpen} /> 
-      
-    </section>
+      </StyledContainer>
+      <OpenNav isMenuOpen={isMenuOpen} />   
+    </StyledHeader>
   )
 }
 

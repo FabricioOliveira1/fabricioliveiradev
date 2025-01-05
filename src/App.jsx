@@ -1,5 +1,3 @@
-import './App.css'
-
 import About from './components/About/index.jsx'
 import Header from './components/Header/index.jsx';
 import Main from './components/Main/index.jsx';
@@ -9,6 +7,8 @@ import Portifolio from './components/Portifolio/index.jsx';
 import Footer from './components/Footer/index.jsx';
 
 import {learningRepos, personalRepos} from './components/Repositorios/index.jsx' ;
+import GlobalStyles, { theme } from './components/GlobalStyles/index.jsx';
+import { ThemeProvider } from 'styled-components';
 
 function App() {      
        
@@ -44,15 +44,18 @@ function App() {
     })
   
     return (
-      <div>
-        <Header />
-        <Main />
-        <About />
-        <Contact />
-        <Skills />
-        <Portifolio learningRepos={repos} highlightrepos={highlightrepos}/>
-        <Footer />
-      </div>
+      <>
+        <GlobalStyles />
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Main />
+          <About />
+          <Contact />
+          <Skills />
+          <Portifolio learningRepos={repos} highlightrepos={highlightrepos}/>
+          <Footer />
+        </ThemeProvider>
+      </>
     );
   }
 
