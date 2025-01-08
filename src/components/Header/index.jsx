@@ -1,5 +1,5 @@
 import WhatsappButton from '../ui/Buttons/WhatsappButton';
-import Nav from '../Nav';
+import Nav from '../Nav'; 
 import OpenNav from '../OpenNav';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
