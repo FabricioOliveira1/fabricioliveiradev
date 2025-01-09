@@ -5,8 +5,10 @@ import styled from "styled-components"
 
 const StyledMain = styled.section`
   
+  color: ${props => props.theme.colors.bgDark};
   background: linear-gradient( currentcolor 20%, rgb(255, 255, 255, 0) 80%, currentcolor),  url(${fundoBanner})  no-repeat; 
   background-size: cover;
+  
   height: 60vh;
   padding-top: 15rem;
 
@@ -15,9 +17,7 @@ const StyledMain = styled.section`
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  color: ${props => props.theme.colors.bgDark};
 
-  
   .mainContainer{
     color: ${props => props.theme.colors.brandLight};
     display: flex;
@@ -61,7 +61,6 @@ img {
     text-align: left;
   }
 }
-
 `
 
 const Main = () => {
