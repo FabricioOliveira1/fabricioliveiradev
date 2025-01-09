@@ -14,7 +14,7 @@ export const theme = {
     textOrange: "hsl(31, 94%, 55%)",
     backgroundGray:"hsl(0, 0%, 6%)",
 
-    bgDark: "hsl(0, 0%, 0%)",
+    bgDark: 'hsl(0, 0%, 0%)',
   },
   tagColors: {
     tagHtmlBg: "hsl(13, 79%, 51%)",
@@ -45,8 +45,6 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'RubikBold';
   src: local('Rubik Bold'), local('RubikBold'), url(${RubikBold});
 }
-
-
 
 :root {
 

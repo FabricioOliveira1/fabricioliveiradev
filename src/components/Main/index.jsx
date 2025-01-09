@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const StyledMain = styled.section`
   
-  background: linear-gradient( var(--bg-dark) 20%, rgb(255, 255, 255, 0) 80%, var(--bg-dark)),  url(${fundoBanner})  no-repeat; 
+  background: linear-gradient( currentcolor 20%, rgb(255, 255, 255, 0) 80%, currentcolor),  url(${fundoBanner})  no-repeat; 
   background-size: cover;
   height: 60vh;
   padding-top: 15rem;
@@ -15,15 +15,16 @@ const StyledMain = styled.section`
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  color: ${props => props.theme.colors.bgDark};
 
-  color: ${props => props.theme.colors.$brandLight};
-  font-size: 24px;
-
-.mainContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  
+  .mainContainer{
+    color: ${props => props.theme.colors.brandLight};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 24px;
 }
 strong, p{
   color: ${props => props.theme.colors.secondaryColor};;
