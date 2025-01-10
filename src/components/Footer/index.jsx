@@ -1,9 +1,76 @@
+import styled from 'styled-components'
 import './Footer.css'
 
+const StyledFooter = styled.footer`
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: ${props => props.theme.colors.bgDark};
+
+ a {
+  text-decoration: none;
+  color: ${props => props.theme.colors.brandLight};
+}
+
+ strong {
+  color: ${props => props.theme.colors.secondaryColor};
+}
+
+.footer-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-title hr {
+    background-color: ${props => props.theme.colors.brandLight};
+    flex: 1;
+    margin-left: 1rem;
+    border: none;
+    height: 0.5px;
+}
+
+.footer-alignContactContainer {
+  margin: auto;
+}
+
+.footer-menulinksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.footer-menulinksContainer ul {
+  padding: 0;
+}
+
+.footer-menulinksContainer li {
+  list-style: none;
+}
+
+
+.footer-contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+
+  margin: auto;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: ${props => props.theme.colors.textDark};
+}
+
+`
 
 const Footer = () => {
     return (
-        <footer className='footer'>
+        <StyledFooter>
             <div className='footer-title'>
                 <h2>Fabricio <strong>Oliveira</strong></h2>
                 <hr/>
@@ -42,7 +109,7 @@ const Footer = () => {
               </div>
             </div>
             <p className='footer-copyright'>Desenvolvido por fabricioliveiradev &copy; </p>
-        </footer>
+        </StyledFooter>
     )
 }
 

@@ -67,8 +67,6 @@ const GlobalStyles = createGlobalStyle`
 --tag-typescript-bg: hsl(210, 63%, 48%);
 }
 
-
-
 /* BREAKPOINTS
 480PX
 768PX

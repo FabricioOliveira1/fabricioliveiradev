@@ -1,16 +1,76 @@
 import Tag from '../../Tags'
-import './SliderCard.css'
 import arrowLink from '../../../../assets/arrow-link.png'
-
-
+import styled from 'styled-components'
 
 /*import { objetoDasLinguagens } from '../../../object.js'*/
 
+const StyledSliderCard = styled.li`
+  
+    font-size: 18px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 25rem;
+  
+  .listItem-img {
+    height: 60%;
+    overflow: hidden;
+  } 
+  
+  p {
+    text-align: start;
+    line-height: 1.5rem;
+  }
+  
+  .listItem-img img {
+    width: 20rem;
+  }
+  
+  .listItem-description {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 20rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 85%, rgba(64,146,168,0) 98%);
+  }
+  
+  .sliderCard-buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .cardButton {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: ${props => props.theme.colors.secondaryColor};
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 20px;
+    padding: 0.2rem;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+      margin-bottom: 0;
+  }
+  
+`
+
 const SliderCard = ({ info }) => {
-
-
     return (
-        <li className='sliderCard' /* style={{
+        <StyledSliderCard  /* style={{
           background: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})`,
           }} */>
             <div className='listItem-description'>
@@ -32,7 +92,7 @@ const SliderCard = ({ info }) => {
                     </a>
                 </div>
             </div>
-        </li>
+        </StyledSliderCard>
     )
 }
 
