@@ -1,40 +1,47 @@
+import styled from 'styled-components';
 import './Tag.css'
 
-const Tag = ({currentTag}) => {
-
-
-  let SpanbackgroundColor = '#ffffff'
-  let SpanTextColor = '#ffffff'
-
+function handleTagColors (currentTag) {
   switch (currentTag) {
     case 'React':
-      SpanbackgroundColor = '#59D1F3';
-      SpanTextColor = '#000000'
+      return "color: #000000; background: #59D1F3"
       break
     case 'JavaScript':
-      SpanbackgroundColor = '#EFD71F';
-      SpanTextColor = '#000000'
+      return "color: #000000; background: #EFD71F"
       break
     case 'CSS':
-      SpanbackgroundColor = '#006EB8';
-      SpanTextColor = '#ffffff'
+      return "color: #ffffff; background: #006EB8"
       break
     case 'TypeScript':
-      SpanbackgroundColor = '#2D7AC8';
-      SpanTextColor = '#ffffff'
+      return "color: #ffffff; background: #2D7AC8"
       break
     case 'HTML':
-      SpanbackgroundColor = '#E54A1F' ; 
-      SpanTextColor = '#ffffff'
+      return "color: #ffffff; background: #E54A1F"
       break;
     default:  
-      SpanbackgroundColor = '#ffffff'
-      SpanTextColor = '#000000'
+      return "color: #000000; background: #ffffff"
   }
+}
+
+const StyledTag = styled.span`
+
+  padding-inline: 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  margin-right: 0.3rem;
+  ${({ $currentTag }) => handleTagColors($currentTag)};
+
+:first-letter {
+  text-transform: capitalize;
+}
+`
+const Tag = ({currentTag}) => {
 
   return (
-    <span style={{backgroundColor: SpanbackgroundColor, color: SpanTextColor}} className='tag'>{currentTag}</span>
+    <StyledTag $currentTag ={currentTag}>{currentTag}</StyledTag>
   )
 }
 
-export default Tag
+export default Tag;
