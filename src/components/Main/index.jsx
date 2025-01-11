@@ -69,7 +69,9 @@ const Main = () => {
        <div className="mainContainer">
         <h1>Olá, eu sou<br/> <strong>Fabricio Oliveira<br/></strong> Desenvolvedor<br/> Front-end</h1>
         <p>Web Developer</p>
-        <CTABUtton text={'Veja Meus Projetos'}/> 
+        <CTABUtton>
+          Veja meus Projetos
+        </CTABUtton> 
       </div>
       <img className="mainImage" src={astronauta} alt='Astronauta no espaço'/> 
     </StyledMain>

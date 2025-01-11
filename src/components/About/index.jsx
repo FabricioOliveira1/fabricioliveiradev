@@ -1,10 +1,74 @@
 import './About.css'
 import rocketLaunch from '../../assets/undraw_maker_launch_crhe.svg'
 import stars from '../../assets/undraw_stars_re_6je7.svg'
+import styled from 'styled-components'
+
+const StyledAbout = styled.section`
+  
+  background: var(--bg-dark);
+  padding-inline: 1.5rem;
+
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+h2 {
+  color: var(--brand-light);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 32px;
+}
+strong {
+  color: var(--secondary-color);
+}
+p {
+  line-height: 1.5rem;
+  
+}
+
+a{
+  text-decoration: underline dotted 2px;
+}
+
+img {
+  max-width: 15rem;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+
+@media (min-width: 1024px) {
+  .aboutContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .aboutContainer-reverse i {
+    order: 2;
+  }
+  .aboutContainer-reverse img {
+    order: 1;
+  }
+}
+
+`
 
 const About = () => {
   return (
-    <section id='about' className='about'>
+    <StyledAbout id='about'>
       <h2>Sobre <strong>mim</strong></h2>
       <div className='aboutContainer'>
         <p>Sou um desenvolvedor <strong>Front-end</strong>, tenho 30 anos e moro Rio de Janeiro. Atualmente cursando faculdade de <strong>Analise e Desenvolvimento de Sistemas</strong>, e cursos para especialização em <strong>React</strong>.
@@ -18,7 +82,7 @@ const About = () => {
         </i>
         <img src={stars} alt='Imagem de um personagem lançando um foguete'/>
      </div>
-    </section>
+    </StyledAbout>
   )
 }
 

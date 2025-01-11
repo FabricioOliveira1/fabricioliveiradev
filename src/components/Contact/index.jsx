@@ -38,7 +38,7 @@ const Contact = () => {
           </path>
         </svg>
       </div>
-      <CTAButton text={'Entrar em Contato'}/>
+      <CTAButton>Entrar em Contato</CTAButton>
     </StyledContact>
 
   )
