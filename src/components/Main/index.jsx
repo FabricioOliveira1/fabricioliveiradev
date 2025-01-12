@@ -1,5 +1,5 @@
 import CTABUtton from "../ui/Buttons/CTAButton"
-import astronauta from '../../assets/undraw_launch_day_4e04.svg'
+import astronauta from '../../assets/foto-pricipal.png'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import styled from "styled-components"
 
@@ -39,7 +39,7 @@ const StyledMain = styled.section`
         }
         
         img {
-          max-width: 20rem;
+          max-width: 35rem;
           }
           
 

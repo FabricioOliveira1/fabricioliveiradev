@@ -1,11 +1,10 @@
-import './About.css'
 import rocketLaunch from '../../assets/undraw_maker_launch_crhe.svg'
 import stars from '../../assets/undraw_stars_re_6je7.svg'
 import styled from 'styled-components'
 
 const StyledAbout = styled.section`
   
-  background: var(--bg-dark);
+  background: ${({theme}) => theme.colors.bgDark};
   padding-inline: 1.5rem;
 
   font-size: 18px;
