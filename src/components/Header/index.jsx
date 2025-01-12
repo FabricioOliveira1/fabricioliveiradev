@@ -6,22 +6,26 @@ import styled from 'styled-components';
 
 
 const StyledHeader = styled.section`
+width: 100%;
 
 height: ${props => props.$headerHeight};
 background: ${props => props.theme.colors.bgDark};
 position: fixed;
 display: flex;
 flex-direction: column;
+align-items: center;
 overflow: hidden;
 
+box-sizing: border-box;
 padding-block: 0;
 z-index: 20;
 `
 const StyledContainer = styled.div`
+width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-align-items: center;
+align-items: stretch;
 padding: 0.5rem 1.5rem;
 ` 
 

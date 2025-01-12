@@ -96,6 +96,11 @@ body section {
 padding-block: 5em;
 transition: 0.3s;
 }
+
+body section > * ,
+body footer > *{
+  max-width: 1024px;
+}
 `
 
 export default GlobalStyles;

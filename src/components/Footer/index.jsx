@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import './Footer.css'
 
 const StyledFooter = styled.footer`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
   background-color: ${props => props.theme.colors.bgDark};
@@ -22,6 +22,7 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
 
 .footer-title hr {
@@ -40,7 +41,7 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  width: 100%;
 }
 .footer-menulinksContainer ul {
   padding: 0;
