@@ -69,8 +69,10 @@ const StyledSliderCard = styled.li`
 `
 
 const SliderCard = ({ info }) => {
+
+  
     return (
-        <StyledSliderCard  /* style={{
+        <StyledSliderCard $backImage={info.backImage} /* style={{
           background: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})`,
           }} */>
             <div className='listItem-description'>

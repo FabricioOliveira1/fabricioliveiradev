@@ -26,7 +26,7 @@ const StyledMain = styled.section`
     font-size: 24px;
     }
     strong, p{
-      color: ${props => props.theme.colors.secondaryColor};;
+      color: ${props => props.theme.colors.secondaryColor};
       }
       
       

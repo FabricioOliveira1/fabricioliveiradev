@@ -23,11 +23,11 @@ const StyledNav = styled.nav`
 }
 
 .navLinks-listItem a {
-    color: var(--brand-light);
+    color: ${props => props.theme.brandLight};
     text-decoration: none;
 }
 .navLinks-listItem a:hover {
-  text-shadow: 2px 2px 8px var(--brand-light);
+  text-shadow: 2px 2px 8px ${props => props.theme.brandLight};
 }
 
 @media (min-width: 1024px) {
