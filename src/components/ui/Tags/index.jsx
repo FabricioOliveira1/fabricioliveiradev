@@ -29,7 +29,7 @@ const StyledTag = styled.span`
   border-radius: 20px;
   display: inline-block;
   text-align: center;
-  font-weight: 500;
+  font-family: 'RubikMedium';
   margin-right: 0.3rem;
   ${({ $currentTag }) => handleTagColors($currentTag)};
 

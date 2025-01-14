@@ -2,6 +2,7 @@ import HighlightCard from '../ui/Cards/HighlightCard'
 import SliderCard from '../ui/Cards/SliderCard'
 import styled from 'styled-components'
 import fundoBanner from '../../assets/fundo-banner.jpg'
+import Imagem from '../Imagem'
 
 
 const StyledPortifolio = styled.section`
@@ -91,7 +92,7 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
       <div className='learningProjects'>
         <h3>Projetos de Cursos</h3>
         <ul>
-          {learningRepos.map((repo) =>  <SliderCard key={repo.id}  info={repo} /> )}
+          {learningRepos.map((repo) =>  <Imagem key={repo.id}  info={repo} /> )}
         </ul>
       </div>
     </StyledPortifolio>

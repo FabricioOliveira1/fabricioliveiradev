@@ -25,7 +25,7 @@ export const learningRepos = [
         languages: ['HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/AluraBooks',
         pageLink: 'alura-books-xi-one.vercel.app',
-        backImage: 'alura-books.png',
+        backImage: './Repositorios/RepoImages/alura-books.png',
       },
       /* {
         id: 2,
