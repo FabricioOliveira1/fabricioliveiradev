@@ -1,12 +1,15 @@
 import Tag from '../../Tags'
 import arrowLink from '../../../../assets/arrow-link.png'
 import styled from 'styled-components'
+import alurabooks from '../../../Repositorios/RepoImages/alura-books.png'
 
 /*import { objetoDasLinguagens } from '../../../object.js'*/
 
 const StyledSliderCard = styled.li`
   
     font-size: 18px;
+   /*  background-image: ${(props) =>
+    `url(${require(`../../../Repositorios/RepoImages/${props.backImage}`).default})`}; */
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
@@ -70,9 +73,9 @@ const StyledSliderCard = styled.li`
 
 const SliderCard = ({ info }) => {
 
-  
+
     return (
-        <StyledSliderCard $backImage={info.backImage} /* style={{
+        <StyledSliderCard  $backImage={info.backImage}/* style={{
           background: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})`,
           }} */>
             <div className='listItem-description'>

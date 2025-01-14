@@ -16,13 +16,13 @@ const StyledAbout = styled.section`
   gap: 1.5rem;
 
 h2 {
-  color: var(--brand-light);
+  color: ${({theme}) => theme.colors.brandLight};
   text-align: center;
   padding: 1.5rem;
   font-size: 32px;
 }
 strong {
-  color: var(--secondary-color);
+  color: ${({theme}) => theme.colors.secondaryColor};
 }
 p {
   line-height: 1.5rem;

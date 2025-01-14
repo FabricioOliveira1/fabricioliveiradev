@@ -1,4 +1,5 @@
 /*Imagens tem que estar no tamanho de 352px*/
+import aluraBooks from './RepoImages/alura-books.png'
 
 
 
@@ -26,7 +27,7 @@ export const learningRepos = [
         pageLink: 'alura-books-xi-one.vercel.app',
         backImage: 'alura-books.png',
       },
-      {
+      /* {
         id: 2,
         name: 'Alura Plus',
         description: 'Alura Plus é um projeto clonado desenvolvido durante o curso da Alura para praticar HTML e CSS basico. e revisar coinceitos. Layout e desing retirado de FIGMA.',
@@ -70,7 +71,7 @@ export const learningRepos = [
         githubLink: 'https://github.com/FabricioOliveira1/Calculadora',
         pageLink: 'https://calculadora-alpha-snowy.vercel.app/',
         backImage: 'calculadora.png',
-      }
+      } */
 ]
 
 
