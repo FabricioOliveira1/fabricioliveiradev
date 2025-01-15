@@ -1,5 +1,4 @@
 import HighlightCard from '../ui/Cards/HighlightCard'
-import SliderCard from '../ui/Cards/SliderCard'
 import styled from 'styled-components'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import Imagem from '../Imagem'
@@ -13,6 +12,7 @@ const StyledPortifolio = styled.section`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  overflow: hidden;
 
  h2 {
   text-align: center;
@@ -39,11 +39,11 @@ const StyledPortifolio = styled.section`
   
 }
 
-.learningProjects ul {
+.learningProjects div {
   display: flex;
   flex-wrap: nowrap;
   padding-left: 0;  
-  overflow: auto;
+  overflow: hidden
   
 }
 
@@ -59,18 +59,6 @@ const StyledPortifolio = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-  }
-   .learningProjects ul{
-    overflow-x: scroll;
-  }
-   .learningProjects ul:hover::-webkit-scrollbar {
-    display: initial;
-    background-color: ${props => props.theme.colors.textDark};
-    height: .7rem;
-  }
-   .learningProjects ul::-webkit-scrollbar-thumb   {
-    background-color: ${props => props.theme.colors.brandLight};
-    border-radius: 20px;
   }
   
 }
@@ -91,9 +79,9 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
       </div>
       <div className='learningProjects'>
         <h3>Projetos de Cursos</h3>
-        <ul>
+        <div>
           {learningRepos.map((repo) =>  <Imagem key={repo.id}  info={repo} /> )}
-        </ul>
+        </div>
       </div>
     </StyledPortifolio>
   )

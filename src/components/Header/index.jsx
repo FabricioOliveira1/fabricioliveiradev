@@ -6,27 +6,29 @@ import styled from 'styled-components';
 
 
 const StyledHeader = styled.section`
-width: 100%;
 
 height: ${props => props.$headerHeight};
 background: ${props => props.theme.colors.bgDark};
 position: fixed;
 display: flex;
 flex-direction: column;
-align-items: center;
+justify-content: center;
+align-items: stretch; /* colocar mediaquerie para desktop */
 overflow: hidden;
+width: 100%;
 
 box-sizing: border-box;
-padding-block: 0;
+padding-block: 0.5rem;
+
 z-index: 20;
 `
 const StyledContainer = styled.div`
-width: 100%;
+max-width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: stretch;
-padding: 0.5rem 1.5rem;
+padding-inline: 1rem;
 ` 
 
 const Header = () => {

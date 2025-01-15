@@ -82,7 +82,7 @@ background: ${theme.bgDark};
 overflow: auto;
 }
 
-body p, h1, h2, h3, a ul, li{
+body p, h1, h2, h3, h4, a ul, li{
 margin: 0;
 padding: 0;
 font-family: 'RubikRegular';

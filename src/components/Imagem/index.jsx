@@ -1,24 +1,19 @@
 import styled from "styled-components";
 import Tag from "../ui/Tags";
 import arrowLink from '../../assets/arrow-link.png'
-import aluraBooks from '../Repositorios/RepoImages/alura-books.png'
 
 const Figure = styled.figure`
     font-size: 18px;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    
-    list-style: none;
+
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: 25rem;
-
-    img {
-        width: 500px;
-    }
+  
+ > img {
+  width: 352px;
+ }
   
   .listItem-img {
     height: 60%;
@@ -34,7 +29,8 @@ const Figure = styled.figure`
     width: 20rem;
   }
   
-  .listItem-description {
+  figcaption {
+    height: 50%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -65,17 +61,16 @@ const Figure = styled.figure`
   }
 
   @media (min-width: 1024px) {
-      margin-bottom: 0;
+      margin: 0;
   }
 `
-
 const Imagem = ({ info }) => {
-    
+
     return(
         <Figure>
-            <img src='../Repositorios/RepoImages/alura-books.png' alt="" />
-            {/*<figcaption className='listItem-description'>
-            <h4>{info.name}</h4>
+            <img src={`/images/RepoImages/${info.backImage}`} alt="" />
+            <figcaption>
+                <h4>{info.name}</h4>
                 <div>
                     {info.languages.map(lang => <Tag key={lang} currentTag={lang} />)}
                 </div>
@@ -92,7 +87,7 @@ const Imagem = ({ info }) => {
                         <img src={arrowLink} alt='Imagem de seta para seguir o link' width="30" height="30" />
                     </a>
                 </div>
-            </figcaption>*/}
+            </figcaption>
         </Figure>
     )
 }

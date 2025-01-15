@@ -1,5 +1,5 @@
 import CTABUtton from "../ui/Buttons/CTAButton"
-import astronauta from '../../assets/foto-pricipal.png'
+import fotoPricipal from '../../assets/foto-pricipal.png'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import styled from "styled-components"
 
@@ -39,7 +39,7 @@ const StyledMain = styled.section`
         }
         
         img {
-          max-width: 35rem;
+          width: 17rem;
           }
           
 
@@ -73,7 +73,7 @@ const Main = () => {
           Veja meus Projetos
         </CTABUtton> 
       </div>
-      <img className="mainImage" src={astronauta} alt='Astronauta no espaço'/> 
+      <img className="mainImage" src={fotoPricipal} alt='Astronauta no espaço'/> 
     </StyledMain>
   )
 }
