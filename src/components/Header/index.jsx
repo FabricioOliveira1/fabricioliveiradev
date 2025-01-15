@@ -16,19 +16,24 @@ justify-content: center;
 align-items: stretch; /* colocar mediaquerie para desktop */
 overflow: hidden;
 width: 100%;
-
-box-sizing: border-box;
-padding-block: 0.5rem;
-
+padding-block: 0rem;
 z-index: 20;
+@media (min-width: 1024px) {
+  align-items: center;
+}
+
 `
 const StyledContainer = styled.div`
 max-width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-align-items: stretch;
-padding-inline: 1rem;
+align-items: center;
+padding: 1rem;
+
+@media (min-width: 1024px) {
+  width: 1024px;
+}
 ` 
 
 const Header = () => {
