@@ -7,6 +7,7 @@ import elementorIcon from '../../assets/elementor.png'
 import typescriptIcon from '../../assets/typescript-icon.png'
 import reactIcon from '../../assets/react-icon.png'
 import styledIcon from '../../assets/styled-components-icon.svg'
+import CSSIcon from '../../assets/css-icon.png'
 import styled from 'styled-components'
 
 const StyledSkills = styled.section`
@@ -38,41 +39,33 @@ strong {
   justify-content: space-between;
 }
 
-.javascriptIcon {
-  margin-top: 0.35rem;
-}
-
-.typescriptIcon g {
-  mix-blend-mode: normal;
-  fill: ${props => props.theme.colors.tagTypescriptBg};
-}
-
+.typescriptIcon,
+.javascriptIcon,
 .reactIcon {
-  fill: ${props => props.theme.colors.tagReactBg};
-}
-
-.cssIcon {
-  fill: ${props => props.theme.colors.tagCssBg};
+  margin-top: 0.4rem;
 }
 
 .powerups {
-  background: linear-gradient(22deg, #242331 4%, #2F2E41 79%);
+  background: linear-gradient(22deg, ${props => props.theme.colors.primaryColor} 4%, #2F2E41 79%);
+  background: ${props => props.theme.colors.primaryColor};
   border-radius: 30px;
-  padding: 1rem;
+  padding: .5rem 2rem 0 2rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   justify-content: space-between;
   padding-left: 0;
-  
 }
 
 li {
   font-size: 18px;
-  list-style: none;
 }
 
 @media (min-width:1024px) {
@@ -103,18 +96,26 @@ const Skills = () => {
           <h3>Typescript</h3>
         </div>
         <div>
-        <img className='styledIcon' src={styledIcon} width="54" height="54" alt='Icone do Styled Components' />
-          <h3>Styled Components</h3>
+        <img className='CSSIcon' src={CSSIcon} width="65" height="65" alt='Icone do CSS' />
+          <h3>CSS</h3>
         </div>
+        
         
       </div>
       <div className='powerups'>
         <ul className='list'>
-          <li><img src={figmaIcon}  alt='Icone do Figma'/></li>
-          <li><img src={canvaIcon}  alt='Icone do Canva' width="48" height="48"/></li>
-          <li><img src={notionIcon}  alt='Icone do Notion' width="48" height="48"/></li>
-          <li><img src={wordpressIcon}  alt='Icone do Wordpress' width="48" height="48"/></li>
-          <li><img src={elementorIcon}  alt='Icone do Wordpress' width="48" height="48"/></li>
+          <li>Styled Components</li>
+          <li>Tailwind</li>
+          <li>SASS</li>
+          <li>WordPress</li>
+          <li>Elementor</li>
+        </ul>
+        <ul className='list'>
+          <li>Figma</li>
+          <li>Canva</li>
+          <li>Notion</li>
+          <li>GitHub</li>
+          <li>Node</li>
         </ul>
       </div>
     </StyledSkills>
