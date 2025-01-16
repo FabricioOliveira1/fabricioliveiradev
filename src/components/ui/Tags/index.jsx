@@ -30,7 +30,7 @@ const StyledTag = styled.span`
   display: inline-block;
   text-align: center;
   font-family: 'RubikMedium';
-  margin-right: 0.3rem;
+  margin:0rem 0.3rem 0.3rem 0rem;
   ${({ $currentTag }) => handleTagColors($currentTag)};
 
 :first-letter {

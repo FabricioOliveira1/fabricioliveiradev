@@ -11,20 +11,12 @@ const StyledPortifolio = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
   overflow: hidden;
 
  h2 {
+  font-size: 32px;
   text-align: center;
   color: ${props => props.theme.colors.secondaryColor};
-}
-
- h3 {
-  text-align: center;
-}
-
- h4 {
-  margin-block: 0;
 }
  .personalProjects-list,
  .learningProjects {
@@ -32,6 +24,12 @@ const StyledPortifolio = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  > h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .learningProjects {
@@ -39,18 +37,16 @@ const StyledPortifolio = styled.section`
   
 }
 
-.learningProjects div {
+.learningProjects > div {
   display: flex;
   flex-wrap: nowrap;
   padding-left: 0;  
-  overflow: hidden
-  
+  overflow: scroll;
 }
 
 .learningProjects ul::-webkit-scrollbar {
   display: none;
 }
-
 
 
 @media (min-width: 768px) {

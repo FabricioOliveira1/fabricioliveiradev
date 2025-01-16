@@ -52,6 +52,7 @@ const Header = () => {
       
       if(isHeaderVisible && lastPosition < currentPosition && currentPosition > 300) {
         setIsHeaderVisible(false)
+        setIsMenuOpen(false)
     } else {
       setIsHeaderVisible(true)
     }

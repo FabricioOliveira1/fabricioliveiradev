@@ -1,9 +1,6 @@
 import './MenuButton.css'
 
 const MenuButton = ({ handleMenuOpen }) => {
-
-
-
   return (
     
       <button className='menuButton' onClick={ () => {handleMenuOpen()} }>
