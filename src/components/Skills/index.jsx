@@ -13,14 +13,19 @@ import styled from 'styled-components'
 const StyledSkills = styled.section`
   
   background-color: ${props => props.theme.colors.primaryColor};
-  padding: 1.5rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 1.5rem;
   overflow: hidden;
 
   text-align: center;
+
+  > h2 {
+    margin-top: 1rem;
+    align-self: center;
+  }
 strong {
   color: ${props => props.theme.colors.secondaryColor};
 }
@@ -28,7 +33,7 @@ strong {
 .mainSkills {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-self: stretch;
   justify-content: center;
   gap: 1rem;
 }
@@ -48,37 +53,33 @@ strong {
 
 .powerups {
   background: ${({ theme }) => theme.colors.secondaryColor};
-  border-radius: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
 }
 
 .list {
   list-style: none;
+  max-width: 100vh;
+  margin-block: 1rem;
+  padding-left: 0;
+  animation: 10s linear infinite running slidein;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: nowrap;
-  margin: 0;
-  animation-name: slide-in;
-  animation: normal;
-  animation-iteration-count: infinite;
 }
 
 li {
   font-size: 18px;
-  display: inline;
   white-space: nowrap; /* no break lines */
 }
-@keyframes slide-in {
+
+@keyframes slidein {
   from {
-    translate: 0;
+    /* pushes the sun down past the viewport */
+    transform: translateX(0vh);
+
   }
   to {
-    translate: 150px;
+    /* returns the sun to its default position */
+    transform: translateX(-100vh);
   }
 }
 
@@ -125,7 +126,27 @@ const Skills = () => {
           <li><p>Canva /&nbsp;</p></li>
           <li><p>Notion /&nbsp;</p></li>
           <li><p>GitHub /&nbsp;</p></li>
-          <li><p>Node.js</p></li>
+          <li><p>Node.js / &nbsp;</p></li>
+          <li><p>Styled Components /&nbsp;</p></li>
+          <li><p>Tailwind /&nbsp;</p></li>
+          <li><p>SASS /&nbsp;</p></li>
+          <li><p>WordPress /&nbsp;</p></li>
+          <li><p>Elementor /&nbsp;</p></li>
+          <li><p>Figma /&nbsp;</p></li>
+          <li><p>Canva /&nbsp;</p></li>
+          <li><p>Notion /&nbsp;</p></li>
+          <li><p>GitHub /&nbsp;</p></li>
+          <li><p>Node.js / &nbsp;</p></li>
+          <li><p>Styled Components /&nbsp;</p></li>
+          <li><p>Tailwind /&nbsp;</p></li>
+          <li><p>SASS /&nbsp;</p></li>
+          <li><p>WordPress /&nbsp;</p></li>
+          <li><p>Elementor /&nbsp;</p></li>
+          <li><p>Figma /&nbsp;</p></li>
+          <li><p>Canva /&nbsp;</p></li>
+          <li><p>Notion /&nbsp;</p></li>
+          <li><p>GitHub /&nbsp;</p></li>
+          <li><p>Node.js / &nbsp;</p></li>
         </ul>
       </div>
     </StyledSkills>
