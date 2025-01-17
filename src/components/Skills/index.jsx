@@ -18,6 +18,7 @@ const StyledSkills = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  overflow: hidden;
 
   text-align: center;
 strong {
@@ -46,26 +47,39 @@ strong {
 }
 
 .powerups {
-  background: linear-gradient(22deg, ${props => props.theme.colors.primaryColor} 4%, #2F2E41 79%);
-  background: ${props => props.theme.colors.primaryColor};
+  background: ${({ theme }) => theme.colors.secondaryColor};
   border-radius: 30px;
-  padding: .5rem 2rem 0 2rem;
-  width: 20rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: start;
 }
 
 .list {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding-left: 0;
+  flex-wrap: nowrap;
+  margin: 0;
+  animation-name: slide-in;
+  animation: normal;
+  animation-iteration-count: infinite;
 }
 
 li {
   font-size: 18px;
+  display: inline;
+  white-space: nowrap; /* no break lines */
+}
+@keyframes slide-in {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: 150px;
+  }
 }
 
 @media (min-width:1024px) {
@@ -73,9 +87,7 @@ li {
     margin-inline: auto;
     width: 50rem;
   }
-  
 } 
-
 `
 
 const Skills = () => {
@@ -104,22 +116,20 @@ const Skills = () => {
       </div>
       <div className='powerups'>
         <ul className='list'>
-          <li>Styled Components</li>
-          <li>Tailwind</li>
-          <li>SASS</li>
-          <li>WordPress</li>
-          <li>Elementor</li>
-        </ul>
-        <ul className='list'>
-          <li>Figma</li>
-          <li>Canva</li>
-          <li>Notion</li>
-          <li>GitHub</li>
-          <li>Node</li>
+          <li><p>Styled Components /&nbsp;</p></li>
+          <li><p>Tailwind /&nbsp;</p></li>
+          <li><p>SASS /&nbsp;</p></li>
+          <li><p>WordPress /&nbsp;</p></li>
+          <li><p>Elementor /&nbsp;</p></li>
+          <li><p>Figma /&nbsp;</p></li>
+          <li><p>Canva /&nbsp;</p></li>
+          <li><p>Notion /&nbsp;</p></li>
+          <li><p>GitHub /&nbsp;</p></li>
+          <li><p>Node.js</p></li>
         </ul>
       </div>
     </StyledSkills>
   )
 }
 
-export default Skills
+export default Skills;
