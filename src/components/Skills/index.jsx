@@ -18,7 +18,7 @@ const StyledSkills = styled.section`
   flex-direction: column;
   align-items: start;
   gap: 1.5rem;
-  overflow: hidden;
+  
 
   text-align: center;
 
@@ -53,17 +53,17 @@ strong {
 
 .powerups {
   background: ${({ theme }) => theme.colors.secondaryColor};
+  width: 100%;
+  overflow: hidden;
 }
 
 .list {
   list-style: none;
-  max-width: 100vh;
-  margin-block: 1rem;
-  padding-left: 0;
-  animation: 10s linear infinite running slidein;
+  padding: 0;
+  transform: translateX(calc(-1812.97px + 414.4px) );
+  animation: 15s linear infinite slidein;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  width: max-content;
 }
 
 li {
@@ -72,14 +72,11 @@ li {
 }
 
 @keyframes slidein {
-  from {
-    /* pushes the sun down past the viewport */
-    transform: translateX(0vh);
-
+  from{
+    transform: translateX(0);
   }
   to {
-    /* returns the sun to its default position */
-    transform: translateX(-100vh);
+    transform: translateX(-1812.97px);
   }
 }
 
@@ -126,7 +123,7 @@ const Skills = () => {
           <li><p>Canva /&nbsp;</p></li>
           <li><p>Notion /&nbsp;</p></li>
           <li><p>GitHub /&nbsp;</p></li>
-          <li><p>Node.js / &nbsp;</p></li>
+          <li><p>Node.js /&nbsp;</p></li>
           <li><p>Styled Components /&nbsp;</p></li>
           <li><p>Tailwind /&nbsp;</p></li>
           <li><p>SASS /&nbsp;</p></li>
@@ -136,7 +133,7 @@ const Skills = () => {
           <li><p>Canva /&nbsp;</p></li>
           <li><p>Notion /&nbsp;</p></li>
           <li><p>GitHub /&nbsp;</p></li>
-          <li><p>Node.js / &nbsp;</p></li>
+          <li><p>Node.js /&nbsp;</p></li>
           <li><p>Styled Components /&nbsp;</p></li>
           <li><p>Tailwind /&nbsp;</p></li>
           <li><p>SASS /&nbsp;</p></li>
@@ -146,8 +143,9 @@ const Skills = () => {
           <li><p>Canva /&nbsp;</p></li>
           <li><p>Notion /&nbsp;</p></li>
           <li><p>GitHub /&nbsp;</p></li>
-          <li><p>Node.js / &nbsp;</p></li>
+          <li><p>Node.js /&nbsp;</p></li>
         </ul>
+        
       </div>
     </StyledSkills>
   )
