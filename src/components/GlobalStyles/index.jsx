@@ -4,7 +4,7 @@ import RubikMedium from './fonts/Rubik-Medium.ttf'
 import RubikRegular from './fonts/Rubik-Regular.ttf'
 
 export const theme = {
-  primaryColor: "hsl(217, 75%, 13%)",
+  
   colors: {
     primaryColor: "hsl(217, 75%, 13%)",
     secondaryColor: "hsl(243, 100%, 69%)",
