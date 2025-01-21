@@ -7,11 +7,11 @@ const Figure = styled.figure`
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     height: 30rem;
     
+    
  > img {
-  width: 352px; /* muda para 341px para fazer carrossel */
+   width:341px;/* muda para 341px para fazer carrossel */
   height: 167px;
  }
   
@@ -26,10 +26,10 @@ const Figure = styled.figure`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 20rem;
-    background: rgb(0,0,0);
+    
     background: ${({ theme }) => theme.colors.bgDark};
     position: relative;
+    
   }
   .linguagesContainer {
     display: inline-block;
@@ -63,10 +63,22 @@ const Figure = styled.figure`
 
   @media (min-width: 1024px) {
       margin: 0;
+      width: 341px;
+      border: 1px solid orange;
+      border-radius: 10px;
+      align-items: center;
+
+      > img {
+      border-radius: 10px 10px 0 0 ;
+      }
+      figcaption {
+        border-radius: 0 0 10px 10px;
+      }
+      
+      
   }
 `
 const Imagem = ({ info }) => {
-
     return(
         <Figure>
             <img src={`/images/RepoImages/${info.backImage}`} alt="" />

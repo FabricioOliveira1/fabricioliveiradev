@@ -59,6 +59,7 @@ const StyledPortifolio = styled.section`
 }
 .learningProjects > div {
   display: flex;
+  gap: 1rem;
   flex-wrap: nowrap;
   padding-left: 0;  
   overflow: hidden;
