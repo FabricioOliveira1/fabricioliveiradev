@@ -2,8 +2,13 @@ import styled from "styled-components";
 
 
 const StyledMenuButton = styled.a`  
+
 svg{
   fill: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  display: none;
 }
 `
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import './Tag.css'
 
 function handleTagColors (currentTag) {
   switch (currentTag) {

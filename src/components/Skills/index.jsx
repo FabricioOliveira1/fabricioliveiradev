@@ -81,10 +81,25 @@ li {
 }
 
 @media (min-width:1024px) {
+  .mainSkills {
+    align-self: center;
+  }
+
   .powerups {
     margin-inline: auto;
-    width: 50rem;
+    min-width: 100%;
+    margin: 0;
+    align-self: center;
   }
+
+  @keyframes slidein {
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1812.97px);
+  }
+}
 } 
 `
 
@@ -114,6 +129,16 @@ const Skills = () => {
       </div>
       <div className='powerups'>
         <ul className='list'>
+          <li><p>Styled Components /&nbsp;</p></li>
+          <li><p>Tailwind /&nbsp;</p></li>
+          <li><p>SASS /&nbsp;</p></li>
+          <li><p>WordPress /&nbsp;</p></li>
+          <li><p>Elementor /&nbsp;</p></li>
+          <li><p>Figma /&nbsp;</p></li>
+          <li><p>Canva /&nbsp;</p></li>
+          <li><p>Notion /&nbsp;</p></li>
+          <li><p>GitHub /&nbsp;</p></li>
+          <li><p>Node.js /&nbsp;</p></li>
           <li><p>Styled Components /&nbsp;</p></li>
           <li><p>Tailwind /&nbsp;</p></li>
           <li><p>SASS /&nbsp;</p></li>

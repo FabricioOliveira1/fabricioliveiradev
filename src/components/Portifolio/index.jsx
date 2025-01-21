@@ -34,7 +34,6 @@ const StyledPortifolio = styled.section`
 
 .learningProjects {
   display: block; 
-  
 }
 
 .learningProjects > div {
@@ -50,12 +49,21 @@ const StyledPortifolio = styled.section`
 
 
 @media (min-width: 768px) {
-   .personalProjects-list {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+  align-items: center;
+
+  .personalProjects-list {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.learningProjects > div {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;  
+  overflow: hidden;
+  max-width: 1056px;
+}
   
 }
 `

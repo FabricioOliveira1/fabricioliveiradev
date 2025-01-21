@@ -46,27 +46,6 @@ const GlobalStyles = createGlobalStyle`
   src: local('Rubik Bold'), local('RubikBold'), url(${RubikBold});
 }
 
-:root {
-
---primary-color: hsl(217, 75%, 13%);
---secondary-color: hsl(243, 100%, 69%);
-
---text-dark: hsl(245, 17%, 29%);  
---brand-light: hsl(0, 0%, 90%);
---text-orange: hsl(31, 94%, 55%);
---background-gray:hsl(0, 0%, 6%);
-
---bg-dark: hsl(0, 0%, 0%);
-
---nav-height: 7.2rem;
-
---tag-html-bg: hsl(13, 79%, 51%);
---tag-css-bg: hsl(204, 100%, 36%);
---tag-js-bg: hsl(53, 87%, 53%);
---tag-react-bg: hsl(193, 86%, 65%);
---tag-typescript-bg: hsl(210, 63%, 48%);
-}
-
 /* BREAKPOINTS
 480PX
 768PX
