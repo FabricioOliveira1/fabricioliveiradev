@@ -11,7 +11,7 @@ const Figure = styled.figure`
     height: 30rem;
     
  > img {
-  width: 352px;
+  width: 352px; /* muda para 341px para fazer carrossel */
   height: 167px;
  }
   

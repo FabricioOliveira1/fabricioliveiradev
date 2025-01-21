@@ -62,7 +62,7 @@ const StyledPortifolio = styled.section`
   flex-wrap: nowrap;
   padding-left: 0;  
   overflow: hidden;
-  max-width: 1056px;
+  max-width: 1024px;
 }
   
 }
