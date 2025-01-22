@@ -3,6 +3,14 @@ import styled from 'styled-components'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import Imagem from '../Imagem'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 const StyledPortifolio = styled.section`
 
@@ -11,60 +19,40 @@ const StyledPortifolio = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  overflow: hidden;
 
- h2 {
+  h2 {
   font-size: 32px;
   text-align: center;
   color: ${props => props.theme.colors.secondaryColor};
-}
- .personalProjects-list,
- .learningProjects {
-  padding-inline: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  > h3 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 0.5rem;
   }
-}
 
-.learningProjects {
-  display: block; 
-}
+  .learningProjects {
+   
+  }
 
-.learningProjects > div {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-left: 0;  
-  overflow: scroll;
-}
+  .learningProjects > h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+ 
+  @media (min-width: 768px) {
+    align-items: center;
 
-.learningProjects ul::-webkit-scrollbar {
-  display: none;
-}
-
-
-@media (min-width: 768px) {
-  align-items: center;
-
-  .personalProjects-list {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.learningProjects > div {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  padding-left: 0;  
-  overflow: hidden;
-  max-width: 1024px;
-}
+    .personalProjects-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .learningProjects > div {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    padding-left: 0;  
+    overflow: hidden;
+    max-width: 1024px;
+  }
   
 }
 `
@@ -84,9 +72,38 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
       </div>
       <div className='learningProjects'>
         <h3>Projetos de Cursos</h3>
-        <div>
-          {learningRepos.map((repo) =>  <Imagem key={repo.id}  info={repo} /> )}
+        <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper_container"
+      >
+        {learningRepos.map((repo) => 
+        <SwiperSlide key={repo.id}>
+          <Imagem key={repo.id}  info={repo} /> 
+        </SwiperSlide>
+        )}
+
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
         </div>
+        </Swiper>
       </div>
     </StyledPortifolio>
   )

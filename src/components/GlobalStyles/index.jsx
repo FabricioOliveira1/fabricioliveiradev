@@ -80,6 +80,10 @@ body section > * ,
 body footer > *{
   max-width: 1024px;
 }
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+}
 `
 
 export default GlobalStyles;

@@ -8,12 +8,7 @@ const Figure = styled.figure`
     display: flex;
     flex-direction: column;
     height: 30rem;
-    
-    
- > img {
-   width:341px;/* muda para 341px para fazer carrossel */
-  height: 167px;
- }
+    width: 80%;
   
   p {
     text-align: start;
