@@ -9,7 +9,12 @@ const Figure = styled.figure`
     flex-direction: column;
     height: 30rem;
     width: 80%;
-  
+
+    > img {
+      border-radius: 10px 10px 0 0 ;
+      border: 2px solid ${({ theme }) => theme.colors.secondaryColor};
+      border-bottom: 0px;
+    }
   p {
     text-align: start;
     line-height: 1.5rem;
@@ -20,7 +25,10 @@ const Figure = styled.figure`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.2rem;
+    border-radius: 0 0 10px 10px;
+    border: 2px solid ${({ theme }) => theme.colors.secondaryColor};
+    border-top: 0px;
     
     background: ${({ theme }) => theme.colors.bgDark};
     position: relative;

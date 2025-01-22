@@ -7,6 +7,7 @@ export const theme = {
   
   colors: {
     primaryColor: "hsl(217, 75%, 13%)",
+    /* secondaryColor: "#166DBA", */
     secondaryColor: "hsl(243, 100%, 69%)",
 
     textDark: "hsl(245, 17%, 29%)",  
@@ -83,6 +84,19 @@ body footer > *{
 .swiper-slide{
   display: flex;
   justify-content: center;
+}
+
+.swiper-slide-prev {
+  transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) translateX(120px) !important;
+  filter: blur(4px);
+}
+.swiper-slide-next {
+  transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) translateX(-120px) !important;
+  filter: blur(2px);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: ${theme.colors.secondaryColor};
 }
 `
 
