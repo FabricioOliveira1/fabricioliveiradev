@@ -26,9 +26,7 @@ const StyledPortifolio = styled.section`
   color: ${props => props.theme.colors.secondaryColor};
   }
 
-  .learningProjects {
-   
-  }
+  
 
   .learningProjects > h3 {
     font-size: 18px;
@@ -39,21 +37,6 @@ const StyledPortifolio = styled.section`
   @media (min-width: 768px) {
     align-items: center;
 
-    .personalProjects-list {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .learningProjects > div {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    padding-left: 0;  
-    overflow: hidden;
-    max-width: 1024px;
-  }
-  
 }
 `
 

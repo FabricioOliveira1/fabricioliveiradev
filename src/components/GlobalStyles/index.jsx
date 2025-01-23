@@ -98,6 +98,26 @@ body footer > *{
 .swiper-button-prev {
   color: ${theme.colors.secondaryColor};
 }
+
+
+  @media (min-width: 400px) {   
+
+  .swiper {
+    max-width: 41rem;
+  }  
+  .swiper-slide{
+    max-width: 200px;
+  }
+  .swiper-slide-prev {
+  transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) !important;
+  filter: blur(4px);
+}
+.swiper-slide-next {
+  transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) !important;
+  filter: blur(2px);
+}
+
+  }
 `
 
 export default GlobalStyles;

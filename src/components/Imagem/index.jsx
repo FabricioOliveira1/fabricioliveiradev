@@ -8,7 +8,7 @@ const Figure = styled.figure`
     display: flex;
     flex-direction: column;
     height: 30rem;
-    width: 80%;
+    max-width: 320px;
 
     > img {
       border-radius: 10px 10px 0 0 ;
@@ -64,22 +64,9 @@ const Figure = styled.figure`
     text-decoration: none;
   }
 
-  @media (min-width: 1024px) {
-      margin: 0;
-      width: 341px;
-      border: 1px solid orange;
-      border-radius: 10px;
-      align-items: center;
-
-      > img {
-      border-radius: 10px 10px 0 0 ;
-      }
-      figcaption {
-        border-radius: 0 0 10px 10px;
-      }
-      
-      
-  }
+  /* @media (min-width: 400px) {      
+      max-width: 320px;
+  } */
 `
 const Imagem = ({ info }) => {
     return(

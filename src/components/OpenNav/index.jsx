@@ -27,7 +27,7 @@ const StyledOpenNav = styled.div`
 }
 `
 
-const OpenNav = ({ isMenuOpen }) => {
+const OpenNav = ({ isMenuOpen, handleMenuOpen }) => {
 
   const [menuHeight, setMenuHeight] = useState('0vh') 
 
@@ -38,10 +38,10 @@ const OpenNav = ({ isMenuOpen }) => {
   return (
     <StyledOpenNav $menuHeight={menuHeight}>
       <ul className='openNavList'>
-        <li className='openNav-listItem'><a href='#home'>Inicio</a></li>
+        <li className='openNav-listItem'><a onClick={ () => {handleMenuOpen()} } href='#main'>Inicio</a></li>
         <li className='openNav-listItem'><a href='#about'>Sobre</a></li>
-        <li className='openNav-listItem'><a href='#portifolio'>Repositórios</a></li>
-        <li className='openNav-listItem'><a href='#projetos'>Projetos</a></li>
+        <li className='openNav-listItem'><a href='https://github.com/FabricioOliveira1?tab=repositories' target="_blank">Repositórios</a></li>
+        <li className='openNav-listItem'><a href='#portifolio'>Projetos</a></li>
       </ul>
       <Contact/>
     </StyledOpenNav>

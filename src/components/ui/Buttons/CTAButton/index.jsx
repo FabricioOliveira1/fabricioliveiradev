@@ -16,9 +16,9 @@ const StyledCTABUtton = styled.a`
 
 `
 
-const CTABUtton = ({children}) => {
+const CTABUtton = ({children, link, page = ''}) => {
   return (
-    <StyledCTABUtton href='https://fabricio-oliveira-portifolio.vercel.app/'>
+    <StyledCTABUtton href={link} target={page}>
       {children}
     </StyledCTABUtton>
   )

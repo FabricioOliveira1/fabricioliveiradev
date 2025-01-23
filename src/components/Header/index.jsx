@@ -82,7 +82,7 @@ const Header = () => {
         <WhatsappButton />
         <Nav handleMenuOpen={handleMenuOpen} />
       </StyledContainer>
-      <OpenNav isMenuOpen={isMenuOpen} />   
+      <OpenNav isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>   
     </StyledHeader>
   )
 }

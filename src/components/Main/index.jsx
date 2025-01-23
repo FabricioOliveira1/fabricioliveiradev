@@ -8,7 +8,7 @@ const StyledMain = styled.section`
   background: linear-gradient( ${props => props.theme.colors.bgDark} 20%, rgb(255, 255, 255, 0) 80%, ${props => props.theme.colors.bgDark}),  url(${fundoBanner})  no-repeat; 
   
   background-size: cover;
-  height: 60vh;
+  height: 50vh;
   padding-top: 15rem;
   
   display: flex;
@@ -28,7 +28,6 @@ const StyledMain = styled.section`
     strong, p{
       color: ${props => props.theme.colors.secondaryColor};
       }
-      
       
       h1, p {
         padding: 0;
@@ -65,11 +64,11 @@ const StyledMain = styled.section`
 
 const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain  id="main">
        <div className="mainContainer">
         <h1>Olá, eu sou<br/> <strong>Fabricio Oliveira<br/></strong> Desenvolvedor<br/> Front-end</h1>
         <p>Web Developer</p>
-        <CTABUtton>
+        <CTABUtton link={'#portifolio'}>
           Veja meus Projetos
         </CTABUtton> 
       </div>

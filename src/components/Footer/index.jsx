@@ -65,6 +65,7 @@ const StyledFooter = styled.footer`
 .footer-copyright {
   text-align: center;
   color: ${props => props.theme.colors.textDark};
+  text-decoration: none;
 }
 
 `
