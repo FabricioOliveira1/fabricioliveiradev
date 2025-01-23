@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
 body {
 margin: 0;
 padding: 0;
-background: ${theme.bgDark};
+background: ${theme.colors.bgDark};
 -webkit-font-smoothing: antialiased;
 overflow: auto;
 }
@@ -99,6 +99,34 @@ body footer > *{
   color: ${theme.colors.secondaryColor};
 }
 
+@keyframes slideRight {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
 
   @media (min-width: 400px) {   
 
@@ -116,7 +144,6 @@ body footer > *{
   transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) !important;
   filter: blur(2px);
 }
-
   }
 `
 

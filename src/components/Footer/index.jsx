@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   gap: 1.5rem;
   padding: 1.5rem;
   background-color: ${props => props.theme.colors.bgDark};
-
+  animation: .7s ease-in slideUp;
  a {
   text-decoration: none;
   color: ${props => props.theme.colors.brandLight};

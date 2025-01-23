@@ -24,23 +24,26 @@ const StyledMain = styled.section`
     align-items: center;
     gap: 1.5rem;
     font-size: 24px;
+    animation: .7s ease-in slideUp;
     }
+    
     strong, p{
       color: ${props => props.theme.colors.secondaryColor};
-      }
+    }
       
-      h1, p {
-        padding: 0;
-        margin: 0;
+    h1, p {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      line-height: 2.5rem;
+    }
         
-        text-align: center;
-        line-height: 2.5rem;
-        }
-        
-        img {
-          width: 17rem;
-          }
-          
+    img {
+      width: 17rem;
+      animation: .7s ease-in slideUp;
+    }
+
+
 
 @media (min-width: 1024px) {
   
@@ -72,7 +75,7 @@ const Main = () => {
           Veja meus Projetos
         </CTABUtton> 
       </div>
-      <img className="mainImage" src={fotoPricipal} alt='Astronauta no espaço'/> 
+      <img src={fotoPricipal} alt='Astronauta no espaço'/> 
     </StyledMain>
   )
 }

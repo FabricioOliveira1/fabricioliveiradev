@@ -19,19 +19,18 @@ const StyledPortifolio = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  animation: .7s ease-in slideUp;
 
   h2 {
   font-size: 32px;
   text-align: center;
   color: ${props => props.theme.colors.secondaryColor};
   }
-
-  
-
   .learningProjects > h3 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 1rem;
+
   }
  
   @media (min-width: 768px) {

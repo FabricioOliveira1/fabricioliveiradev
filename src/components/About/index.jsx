@@ -20,6 +20,7 @@ h2 {
   text-align: center;
   padding: 1.5rem;
   font-size: 32px;
+  animation: .7s ease-in slideUp;
 }
 strong {
   color: ${({theme}) => theme.colors.secondaryColor};
@@ -47,6 +48,10 @@ img {
   align-items: center;
   text-align: center;
   gap: 2rem;
+  animation: .7s ease-in slideLeft;
+}
+.aboutContainer-reverse {
+  animation: .7s ease-in slideRight;
 }
 
 @media (min-width: 1024px) {

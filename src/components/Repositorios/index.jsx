@@ -23,7 +23,7 @@ export const learningRepos = [
         description: 'Projeto realizado pela escola Alura, onde foi desenvolvido uma pagina de catálogo de eBooks fictícia, revendo conceitos de HTML e CSS',
         languages: ['HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/AluraBooks',
-        pageLink: 'alura-books-xi-one.vercel.app',
+        pageLink: 'https://alura-books-xi-one.vercel.app',
         backImage: 'alura-books.png',
       },
       {
@@ -32,7 +32,7 @@ export const learningRepos = [
         description: 'Alura Plus é um projeto clonado desenvolvido durante o curso da Alura para praticar HTML e CSS basico. e revisar coinceitos. Layout e desing retirado de FIGMA.',
         languages: ['HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/aluraplus',
-        pageLink: 'aluraplus-red-kappa.vercel.app',
+        pageLink: 'https://aluraplus-red-kappa.vercel.app',
         backImage: 'alura-plus.png',
       },
       {
@@ -41,7 +41,7 @@ export const learningRepos = [
         description: 'Ignite Timer é um temporizador, no estilo de estudo Pomodoro com histórico, cadastro e status de tarefas.',
         languages: ['React','TypeScript','JavaScript','HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/ignite-timer',
-        pageLink: 'ignite-timer-beta-eight.vercel.app',
+        pageLink: 'https://ignite-timer-beta-eight.vercel.app',
         backImage: 'ignite-timer.png',
       },
       {
@@ -50,7 +50,7 @@ export const learningRepos = [
         description: 'Dtmoney é um projeto de registro de transações monetárias desenvolvido no curso de aceleração Ignite da Rockeseat.',
         languages: ['React','TypeScript','JavaScript','HTML', 'CSS'],
         githubLink: 'https://github.com/FabricioOliveira1/dtmoney',
-        pageLink: 'dtmoney-ten-xi.vercel.app',
+        pageLink: 'https://dtmoney-ten-xi.vercel.app',
         backImage: 'dt-money.png',
       },
       {

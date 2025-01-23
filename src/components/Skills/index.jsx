@@ -25,6 +25,7 @@ const StyledSkills = styled.section`
   > h2 {
     margin-top: 1rem;
     align-self: center;
+    animation: .7s ease-in slideUp;
   }
 strong {
   color: ${props => props.theme.colors.secondaryColor};
@@ -36,6 +37,7 @@ strong {
   align-self: stretch;
   justify-content: center;
   gap: 1rem;
+  animation: .7s ease-in slideUp;
 }
 
 .mainSkills div {
