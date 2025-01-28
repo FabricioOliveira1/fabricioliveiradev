@@ -10,12 +10,12 @@ const HighlightCard = ({info}) => {
     return (
     
     <li className='highlightCard'>
-      <div className='listItem-img' style={{
+      {/* <div className='listItem-img' style={{
           backgroundImage: `url(${require(`../../../Repositorios/RepoImages/${info.backImage}`)})
           `,
           }}>
         
-      </div>
+      </div> */}
       <div className='listItem-description'>
         <h4>{info.name}</h4>
         <div>

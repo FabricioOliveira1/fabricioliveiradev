@@ -1,7 +1,8 @@
 import CTABUtton from "../ui/Buttons/CTAButton"
-import fotoPricipal from '../../assets/foto-pricipal.png'
+import fotoPricipal from '../../assets/foto-pricipal-editada.png'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import styled from "styled-components"
+import { motion } from "motion/react"
 
 const StyledMain = styled.section`
   
@@ -24,7 +25,6 @@ const StyledMain = styled.section`
     align-items: center;
     gap: 1.5rem;
     font-size: 24px;
-    animation: .7s ease-in slideUp;
     }
     
     strong, p{
@@ -40,7 +40,6 @@ const StyledMain = styled.section`
         
     img {
       width: 17rem;
-      animation: .7s ease-in slideUp;
     }
 
 
@@ -66,16 +65,36 @@ const StyledMain = styled.section`
 `
 
 const Main = () => {
+  
   return (
-    <StyledMain  id="main">
-       <div className="mainContainer">
+    <StyledMain id="main">
+       <motion.div 
+       className="mainContainer"
+       initial={{
+        y: 100, 
+        opacity:0
+      }} 
+      whileInView={{
+        opacity:1, 
+        y: 0, 
+        transition: { duration: .7 } 
+        }} src={fotoPricipal} alt='Astronauta no espaço'>
         <h1>Olá, eu sou<br/> <strong>Fabricio Oliveira<br/></strong> Desenvolvedor<br/> Front-end</h1>
         <p>Web Developer</p>
         <CTABUtton link={'#portifolio'}>
           Veja meus Projetos
         </CTABUtton> 
-      </div>
-      <img src={fotoPricipal} alt='Astronauta no espaço'/> 
+      </motion.div>
+      <motion.img 
+      initial={{
+        y: 100, 
+        opacity:0
+      }} 
+      whileInView={{
+        opacity:1, 
+        y: 0, 
+        transition: { duration: .7 } 
+        }} src={fotoPricipal} alt='Astronauta no espaço' className="animation"/> 
     </StyledMain>
   )
 }

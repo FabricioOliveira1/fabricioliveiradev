@@ -3,13 +3,13 @@ import styled from 'styled-components'
 import fundoBanner from '../../assets/fundo-banner.jpg'
 import Imagem from '../Imagem'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'motion/react'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 const StyledPortifolio = styled.section`
@@ -30,16 +30,16 @@ const StyledPortifolio = styled.section`
     font-size: 18px;
     text-align: center;
     margin-bottom: 1rem;
-
   }
  
   @media (min-width: 768px) {
     align-items: center;
-
 }
 `
 
 const Portifolio = ({ learningRepos, highlightrepos }) => {
+
+  
 
   return (
     <StyledPortifolio id='portifolio'>
@@ -52,7 +52,13 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
           )}
         </ul> */}
       </div>
-      <div className='learningProjects'>
+      <motion.div initial={{
+        opacity: 0
+      }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 }
+        }} className='learningProjects'>
         <h3>Projetos de Cursos</h3>
         <Swiper
         effect={'coverflow'}
@@ -86,7 +92,7 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
           <div className="swiper-pagination"></div>
         </div>
         </Swiper>
-      </div>
+      </motion.div>
     </StyledPortifolio>
   )
 }

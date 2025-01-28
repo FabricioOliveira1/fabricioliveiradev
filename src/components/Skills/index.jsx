@@ -9,6 +9,7 @@ import reactIcon from '../../assets/react-icon.png'
 import styledIcon from '../../assets/styled-components-icon.svg'
 import CSSIcon from '../../assets/css-icon.png'
 import styled from 'styled-components'
+import { motion } from 'motion/react'
 
 const StyledSkills = styled.section`
   
@@ -19,7 +20,6 @@ const StyledSkills = styled.section`
   align-items: start;
   gap: 1.5rem;
   
-
   text-align: center;
 
   > h2 {
@@ -104,30 +104,55 @@ li {
 }
 } 
 `
-
 const Skills = () => {
   return (
     <StyledSkills>
       <h2>Minhas Skills e <strong>Power up's</strong></h2>
-      <div className='mainSkills'>
-        <div>
+      <div  className='mainSkills'>
+        <motion.div 
+        initial={{
+        scale: 0
+        }}
+        whileInView={{
+          scale: 1,
+          transition: { duration: .3 }
+        }}>
         <img className='reactIcon' src={reactIcon} width="54" height="54" alt='Icone do react' />
           <h3>React.js</h3>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div 
+        initial={{
+        scale: 0
+        }}
+        whileInView={{
+          scale: 1,
+          transition: { duration: .3 }
+        }}>
           <img className='javascriptIcon' src={javascriptIcon} width="54" height="54" alt='Icone do Javascript' />
           <h3>Javascript</h3>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div 
+        initial={{
+        scale: 0
+        }}
+        whileInView={{
+          scale: 1,
+          transition: { duration: .3 }
+        }}>
         <img className='typescriptIcon' src={typescriptIcon} width="54" height="54" alt='Icone do Typescript' />
           <h3>Typescript</h3>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div 
+        initial={{
+        scale: 0
+        }}
+        whileInView={{
+          scale: 1,
+          transition: { duration: .3 }
+        }}>
         <img className='CSSIcon' src={CSSIcon} width="65" height="65" alt='Icone do CSS' />
           <h3>CSS</h3>
-        </div>
-        
-        
+        </motion.div>
       </div>
       <div className='powerups'>
         <ul className='list'>
@@ -172,7 +197,6 @@ const Skills = () => {
           <li><p>GitHub /&nbsp;</p></li>
           <li><p>Node.js /&nbsp;</p></li>
         </ul>
-        
       </div>
     </StyledSkills>
   )

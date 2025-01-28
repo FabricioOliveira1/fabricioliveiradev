@@ -9,11 +9,35 @@ import Footer from './components/Footer/index.jsx';
 import {learningRepos, personalRepos} from './components/Repositorios/index.jsx' ;
 import GlobalStyles, { theme } from './components/GlobalStyles/index.jsx';
 import { ThemeProvider } from 'styled-components';
+import { useEffect, useState } from 'react';
 
 function App() {      
-       
-    const repos = learningRepos.map(repo => {   
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+
+    
+    function handleMenuOpen() {
+      setIsMenuOpen(!isMenuOpen)
+    }
+    
+    let lastPosition = 0;
+    function isScrolling() {
+      const currentPosition = window.scrollY; 
+      if(isHeaderVisible && lastPosition < currentPosition && currentPosition > 300) {
+          setIsHeaderVisible(false)
+          setIsMenuOpen(false)
+      } else {
+        setIsHeaderVisible(true)
+      }
+      lastPosition = currentPosition;
+    }
+
+  useEffect(() => {
+    document.addEventListener('scroll', isScrolling);
+  },[])
       
+      const repos = learningRepos.map(repo => {   
       return(
         {
           id: repo.id,
@@ -47,7 +71,11 @@ function App() {
       <>
         <GlobalStyles />
         <ThemeProvider theme={theme}>
-          <Header />
+          <Header 
+          isMenuOpen={isMenuOpen}
+          isHeaderVisible={isHeaderVisible}
+          handleMenuOpen={handleMenuOpen}
+          />
           <Main />
           <About />
           <Contact />

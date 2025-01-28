@@ -36,28 +36,9 @@ padding: 1rem;
 }
 ` 
 
-const Header = () => {
+const Header = ({ isMenuOpen, isHeaderVisible, handleMenuOpen }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [headerHeight, setHeaderHeight] = useState('5rem') 
-
-  function handleMenuOpen() {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  let lastPosition = 0;
-  function isScrolling() {
-      const currentPosition = window.scrollY;
-      
-      if(isHeaderVisible && lastPosition < currentPosition && currentPosition > 300) {
-        setIsHeaderVisible(false)
-        setIsMenuOpen(false)
-    } else {
-      setIsHeaderVisible(true)
-    }
-    lastPosition = currentPosition
-  } 
 
   useEffect(() => {
     if (isMenuOpen){
@@ -66,14 +47,9 @@ const Header = () => {
       setHeaderHeight('5rem')
     }
   },[isMenuOpen])
-    
-  useEffect(() => {
-    document.addEventListener('scroll', isScrolling);
-  },[])
 
   useEffect(() => {
     isHeaderVisible ? setHeaderHeight('5rem') : setHeaderHeight('0')
-    
   },[isHeaderVisible]) 
 
   return (
