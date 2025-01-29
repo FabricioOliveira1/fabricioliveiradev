@@ -14,6 +14,7 @@ const StyledAbout = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   gap: 1.5rem;
 
 h2 {
