@@ -70,6 +70,7 @@ const Figure = styled.figure`
   } */
 `
 const Imagem = ({ info }) => {
+  
     return(
         <Figure>
             <img src={`/images/RepoImages/${info.backImage}`} alt="" />

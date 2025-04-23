@@ -11,6 +11,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { useEffect, useRef, useState } from 'react'
 
 const StyledPortifolio = styled.section`
 
@@ -39,7 +40,20 @@ const StyledPortifolio = styled.section`
 
 const Portifolio = ({ learningRepos, highlightrepos }) => {
 
-  
+  const [repositories, setRepositories] = useState([]);
+  async function fetchRepositories() {
+    const repos = await fetch("https://my-json-server.typicode.com/FabricioOliveira1/site-images/db")
+      .then((response) => (response.json()))
+      .then((data) => data.repositorios)
+      .then((repositorios) => {
+        setRepositories(repositorios) 
+      })
+  }
+
+  useEffect(() => {
+    fetchRepositories()
+    }, [])
+
 
   return (
     <StyledPortifolio id='portifolio'>
@@ -64,7 +78,7 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}
+        loop={false}
         slidesPerView={'auto'}
         
         pagination={{ el: '.swiper-pagination', clickable: true }}
@@ -75,12 +89,21 @@ const Portifolio = ({ learningRepos, highlightrepos }) => {
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
-      >
-        {learningRepos.map((repo) => 
-        <SwiperSlide key={repo.id}>
-          <Imagem key={repo.id}  info={repo} /> 
-        </SwiperSlide>
-        )}
+        >
+        { repositories ?
+            repositories.map((repo) => 
+            <SwiperSlide key={repo.id}>
+              <Imagem key={repo.id}  info={repo} /> 
+            </SwiperSlide>
+          )
+          : 
+          learningRepos.map((repo) => 
+            <SwiperSlide key={repo.id}>
+              <Imagem key={repo.id}  info={repo} /> 
+            </SwiperSlide>
+          )
+        }
+        
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">

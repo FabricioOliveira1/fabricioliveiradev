@@ -85,6 +85,9 @@ body footer > *{
   display: flex;
   justify-content: center;
 }
+.swiper-wrapper{
+  
+}
 
 .swiper-slide-prev {
   transform: translate3d(0px, 0px, -100.048px) rotateX(0deg) scale(1) translateX(120px) !important;
