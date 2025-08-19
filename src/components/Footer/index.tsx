@@ -80,7 +80,7 @@ const Footer = () => {
                 <div>
                     <h3><strong>Menu</strong></h3>
                     <ul>
-                        <li><a href='#home'>Inicio</a></li>
+                        <li><a href='#main'>Inicio</a></li>
                         <li><a href='#about'>Sobre</a></li>
                         <li><a href='#portifolio'>Projetos</a></li>
                     </ul>

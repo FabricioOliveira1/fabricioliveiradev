@@ -1,9 +1,19 @@
 import styled from 'styled-components';
 
-function handleTagColors (currentTag) {
+interface TagProps {
+  currentTag: string;
+}
+
+function handleTagColors (currentTag:string) {
   switch (currentTag) {
     case 'React':
       return "color: #000000; background: #59D1F3"
+      break
+    case 'React Native':
+      return "color: #ffffff; background: #006EB8"
+      break
+    case 'Expo':
+      return "color: #ffffff; background: #000000"
       break
     case 'JavaScript':
       return "color: #000000; background: #EFD71F"
@@ -22,7 +32,7 @@ function handleTagColors (currentTag) {
   }
 }
 
-const StyledTag = styled.span`
+const StyledTag = styled.span<{ $currentTag:string }>`
 
   padding-inline: 0.5rem;
   border-radius: 20px;
@@ -36,10 +46,11 @@ const StyledTag = styled.span`
   text-transform: capitalize;
 }
 `
-const Tag = ({currentTag}) => {
+
+const Tag: React.FC<TagProps> = ({ currentTag }) => {
 
   return (
-    <StyledTag $currentTag ={currentTag}>{currentTag}</StyledTag>
+    <StyledTag $currentTag={currentTag}>{currentTag}</StyledTag>
   )
 }
 

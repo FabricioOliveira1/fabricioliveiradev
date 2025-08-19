@@ -50,7 +50,7 @@ const Nav = ({ handleMenuOpen }: NavProps) => {
           <li className='navLinks-listItem'><a href='#home'>Inicio</a></li>
           <li className='navLinks-listItem'><a href='#about'>Sobre</a></li>
           <li className='navLinks-listItem'><a href='https://github.com/FabricioOliveira1?tab=repositories' target='_blank'>Repositórios</a></li>
-          <li className='navLinks-listItem'><a href='#projetos'>Projetos</a></li>
+          <li className='navLinks-listItem'><a href='#portifolio'>Projetos</a></li>
         </ul>
       </div>
       <MenuButton  handleMenuOpen={handleMenuOpen}/>
