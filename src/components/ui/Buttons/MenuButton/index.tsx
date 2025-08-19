@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
+interface MenuButtonProps {
+  handleMenuOpen: () => void;
+}
 
 const StyledMenuButton = styled.a`  
-
 svg{
   fill: #ffffff;
 }
@@ -12,7 +14,7 @@ svg{
 }
 `
 
-const MenuButton = ({ handleMenuOpen }) => {
+const MenuButton = ({ handleMenuOpen }:MenuButtonProps) => {
   return (
     <StyledMenuButton onClick={ () => {handleMenuOpen()} }>
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30"

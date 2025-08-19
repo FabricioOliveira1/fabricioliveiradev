@@ -4,12 +4,9 @@ import styled from 'styled-components'
 import { motion } from 'motion/react'
 
 const StyledAbout = styled.section`
-  
   background: ${({ theme }) => theme.colors.bgDark};
   padding-inline: 1.5rem;
-
   font-size: 18px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,14 +19,12 @@ h2 {
   text-align: center;
   padding: 1.5rem;
   font-size: 32px;
-  
 }
 strong {
   color: ${({ theme }) => theme.colors.secondaryColor};
 }
 p {
   line-height: 1.5rem;
-  
 }
 
 a{
@@ -52,9 +47,6 @@ img {
   gap: 2rem;
   
 }
-.aboutContainer-reverse {
-  
-}
 
 @media (min-width: 1024px) {
   .aboutContainer {
@@ -74,8 +66,6 @@ img {
 `
 
 const About = () => {
-
-
   return (
     <StyledAbout id='about'>
       <motion.h2 initial={{

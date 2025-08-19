@@ -1,6 +1,10 @@
 import MenuButton from '../ui/Buttons/MenuButton';
 import styled from 'styled-components';
 
+interface NavProps {
+  handleMenuOpen: () => void;
+}
+
 const StyledNav = styled.nav`
   
     display: flex;
@@ -37,7 +41,7 @@ const StyledNav = styled.nav`
 }
 `;
 
-const Nav = ({ handleMenuOpen }) => {
+const Nav = ({ handleMenuOpen }: NavProps) => {
 
   return (
     <StyledNav>

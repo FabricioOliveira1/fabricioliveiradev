@@ -2,7 +2,22 @@ import { useEffect, useState } from 'react';
 import Contact from '../Contact';
 import styled from 'styled-components';
 
-const StyledOpenNav = styled.div`
+interface OpenNavProps {
+  isMenuOpen: boolean;
+  handleMenuOpen: () => void;
+}
+
+interface StyledOpenNavProps {
+  $menuHeight: string;
+  theme: {
+    colors: {
+      bgDark: string;
+      brandLight: string;
+    };
+  };
+}
+
+const StyledOpenNav = styled.div<StyledOpenNavProps>`
 
   height: ${({ $menuHeight }) => $menuHeight};
   background-color: ${({theme}) => theme.colors.bgDark};
@@ -27,12 +42,16 @@ const StyledOpenNav = styled.div`
 }
 `
 
-const OpenNav = ({ isMenuOpen, handleMenuOpen }) => {
+const OpenNav = ({ isMenuOpen, handleMenuOpen }: OpenNavProps) => {
 
   const [menuHeight, setMenuHeight] = useState('0vh') 
 
   useEffect(() => {
-    isMenuOpen ? setMenuHeight('100vh') : setMenuHeight('0')
+    if (isMenuOpen) {
+      setMenuHeight('100vh');
+    } else {
+      setMenuHeight('0');
+    }
   }, [isMenuOpen])
 
   return (

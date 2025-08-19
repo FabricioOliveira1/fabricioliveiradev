@@ -67,7 +67,6 @@ const StyledFooter = styled.footer`
   color: ${props => props.theme.colors.textDark};
   text-decoration: none;
 }
-
 `
 
 const Footer = () => {

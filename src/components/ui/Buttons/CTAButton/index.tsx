@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+interface CTAButtonProps {
+  children: React.ReactNode;
+  link: string;
+  page?: string;
+}
+
 const StyledCTABUtton = styled.a`
    
   background-color: white;
@@ -13,10 +19,9 @@ const StyledCTABUtton = styled.a`
   text-align: center;
   text-transform: uppercase;
   font-family: 'RubikMedium';
-
 `
 
-const CTABUtton = ({children, link, page = ''}) => {
+const CTABUtton = ({ link, children, page }: CTAButtonProps) => {
   return (
     <StyledCTABUtton href={link} target={page}>
       {children}

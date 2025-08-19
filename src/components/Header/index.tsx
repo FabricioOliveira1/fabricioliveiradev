@@ -1,13 +1,17 @@
 import WhatsappButton from '../ui/Buttons/WhatsappButton';
 import Nav from '../Nav'; 
 import OpenNav from '../OpenNav';
-import { useEffect, useState } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
+interface HeaderProps {
+  isMenuOpen: boolean;
+  handleMenuOpen: () => void;
+}
 
 const StyledHeader = styled.section`
 
-height: ${props => props.$headerHeight};
+height: 5rem;
 background: ${props => props.theme.colors.bgDark};
 position: fixed;
 display: flex;
@@ -21,7 +25,6 @@ z-index: 20;
 @media (min-width: 1024px) {
   align-items: center;
 }
-
 `
 const StyledContainer = styled.div`
 max-width: 100%;
@@ -35,25 +38,10 @@ padding: 1rem;
   width: 1024px;
 }
 ` 
-
-const Header = ({ isMenuOpen, isHeaderVisible, handleMenuOpen }) => {
-
-  const [headerHeight, setHeaderHeight] = useState('5rem') 
-
-  useEffect(() => {
-    if (isMenuOpen){
-      setHeaderHeight('100vh')
-    } else {
-      setHeaderHeight('5rem')
-    }
-  },[isMenuOpen])
-
-  useEffect(() => {
-    isHeaderVisible ? setHeaderHeight('5rem') : setHeaderHeight('0')
-  },[isHeaderVisible]) 
+const Header = forwardRef<HTMLDivElement, HeaderProps>(({ isMenuOpen,  handleMenuOpen }, ref) => {
 
   return (
-    <StyledHeader $headerHeight={headerHeight}>
+    <StyledHeader ref={ref} >
       <StyledContainer>
         <WhatsappButton />
         <Nav handleMenuOpen={handleMenuOpen} />
@@ -61,6 +49,6 @@ const Header = ({ isMenuOpen, isHeaderVisible, handleMenuOpen }) => {
       <OpenNav isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen}/>   
     </StyledHeader>
   )
-}
+})
 
 export default Header;

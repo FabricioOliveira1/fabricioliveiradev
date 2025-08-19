@@ -78,7 +78,7 @@ const Main = () => {
         opacity:1, 
         y: 0, 
         transition: { duration: .7 } 
-        }} src={fotoPricipal} alt='Astronauta no espaço'>
+        }} >
         <h1>Olá, eu sou<br/> <strong>Fabricio Oliveira<br/></strong> Desenvolvedor<br/> Front-end</h1>
         <p>Web Developer</p>
         <CTABUtton link={'#portifolio'}>
