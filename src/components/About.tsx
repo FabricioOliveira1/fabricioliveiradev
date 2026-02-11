@@ -18,14 +18,14 @@ const About = () => {
           <div className="grid md:grid-cols-5 gap-10 items-center">
             <div className="md:col-span-3 space-y-4 text-foreground/70 leading-relaxed text-center md:text-left">
               <p>
-                Sou um desenvolvedor <span className="text-primary font-medium">Front-end</span>, tenho 31 anos e moro
+                Sou um desenvolvedor <span className="text-primary font-medium">Front-end</span>, tenho 32 anos e moro
                 no Rio de Janeiro. Atualmente cursando faculdade de{" "}
                 <span className="text-primary font-medium">Análise e Desenvolvimento de Sistemas</span>, e cursos para
-                especialização em <span className="text-primary font-medium">React</span>.
+                especialização em <span className="text-primary font-medium">React.js, React Native </span>e todo o ecossistema.
               </p>
               <p>
-                <span className="text-primary font-semibold">O meu principal objetivo é evoluir como desenvolvedor</span>.
-                Então, se você é uma empresa que procura por uma presença melhor na internet,
+                <span className="text-primary font-semibold">O meu principal objetivo é evoluir como desenvolvedor full stack e mobile.</span>
+                {" "}Então, se você é uma empresa que procura por uma presença melhor na internet,
                 ou se deseja <span className="text-primary font-medium">contratar</span>,
                 pode entrar em contato comigo{" "}
                 <a
