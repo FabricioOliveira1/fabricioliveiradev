@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCss3Alt, faJava, faJs, faReact, faTailwindCss, faTypescript, IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import ReactNativeIcon from "/src/assets/react-native.png"; 
-import ExpoIcon from "/src/assets/expo.svg"; 
-import NextIcon from "/src/assets/nextjs.svg"; 
+import { faCss3Alt, faJs, faReact, faTailwindCss, faTypescript, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import ReactNativeIcon from "/assets/react-native.png"; 
+import ExpoIcon from "/assets/expo.svg"; 
+import NextIcon from "/assets/nextjs.svg"; 
 
 
 

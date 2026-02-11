@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import fabricioPhoto from "@/assets/fabricio-photo.png";
-
+import fabricioPhoto from "/assets/fabricio-photo.png"; 
 const Hero = () => {
   return (
     <section id="main" className="min-h-screen flex items-center relative overflow-hidden">
