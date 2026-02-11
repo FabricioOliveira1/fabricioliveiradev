@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Hora Certa Med",
-    image: "/src/assets/hora-certa-med.png",
+    image: "/assets/hora-certa-med.png",
     inDevelopment: true,
     mobile: true,
     tags: ["React Native", "Expo"],
@@ -24,7 +24,7 @@ const projects: Project[] = [
   },
   {
     title: "App Crossfit VK",
-    image: "/src/assets/cftvk-app.jpeg",
+    image: "/assets/cftvk-app.jpeg",
     inDevelopment: true,
     mobile: true,
     tags: ["React Native", "Expo"],
@@ -33,7 +33,7 @@ const projects: Project[] = [
   },
   {
     title: "Site Crossfit VK",
-    image: "/src/assets/cftvk-website.png",
+    image: "/assets/cftvk-website.png",
     inDevelopment: false,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     link: "https://cftvk-website.vercel.app/",
@@ -41,7 +41,7 @@ const projects: Project[] = [
   },
   {
     title: "Site Impulso Digital",
-    image: "/src/assets/impulso-digital-website.png",
+    image: "/assets/impulso-digital-website.png",
     inDevelopment: false,
     link: "https://impulsodigital.dev.br/",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],

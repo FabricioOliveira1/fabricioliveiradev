@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import rocketIllustration from "@/assets/rocket-illustration.svg";
+import rocketIllustration from "/assets/rocket-illustration.svg";
 
 const About = () => {
   return (
