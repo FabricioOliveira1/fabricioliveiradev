@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+# 💻 Portfólio – @FabricioOliveira1
 
-## Project info
+[Visite o site ao vivo 🚀](https://fabricioliveiradev.vercel.app/)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Este repositório contém o código-fonte do meu **site de portfólio pessoal**, onde apresento minhas habilidades, projetos e experiências como **desenvolvedor de software**. O site foi construído com **React, TypeScript e Vite** e está atualmente publicado via **Vercel**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 Sobre o Projeto
 
-**Use Lovable**
+O objetivo deste portfólio é consolidar e exibir minha evolução como desenvolvedor em uma **única página moderna e responsiva**, permitindo que recrutadores e colaboradores vejam meu conjunto de habilidades e projetos em produção de forma direta e profissional.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tecnologias Utilizadas
 
-**Use your preferred IDE**
+- **React**  
+- **TypeScript**  
+- **Vite**   
+- **HTML5 & CSS3**  
+- Hospedagem: **Vercel**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📌 Funcionalidades
 
-Follow these steps:
+✔️ Seção de apresentação pessoal  
+✔️ Lista de habilidades técnicas  
+✔️ Projetos com links e descrições  
+✔️ Navegação responsiva  
+✔️ Layout limpo com foco em conteúdo  
+✔️ Deploy automático via Vercel
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Como Executar Localmente
 
-# Step 3: Install the necessary dependencies.
-npm i
+Clone o repositório:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/FabricioOliveira1/fabricioliveiradev.git
+
+Instale as dependências:
+
+cd fabricioliveiradev
+npm install
+
+
+Inicie o ambiente de desenvolvimento:
+
 npm run dev
+
+
+Abra no navegador:
+
+http://localhost:3000
+
 ```
 
-**Edit a file directly in GitHub**
+## 📁 Estrutura do Projeto
+.
+├── public/                  # Arquivos estáticos
+├── src/                     # Código front-end
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   └── styles/
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📌 Status do Projeto
 
-**Use GitHub Codespaces**
+🚧 Em constante evolução — alterações, melhorias e novas seções podem ser adicionadas conforme avanço na minha jornada como desenvolvedor.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 👨‍💻 Sobre Mim
 
-## What technologies are used for this project?
+Olá 👋, sou Fabrício Oliveira, desenvolvedor com foco em Front-End e Full-Stack. Este portfólio reflete minha progressão técnica e minha forma de trabalhar com tecnologias modernas para entregar soluções elegantes e funcionais.
 
-This project is built with:
+Você pode conferir mais sobre mim e entrar em contato nos links abaixo!
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📬 Contato & Conexões
 
-## How can I deploy this project?
+Website: https://fabricioliveiradev.vercel.app/
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+GitHub: https://github.com/FabricioOliveira1
 
-## Can I connect a custom domain to my Lovable project?
+LinkedIn: https://www.linkedin.com/in/fabricioliveira-1/
 
-Yes, you can!
+## ⭐ Se você gostou deste projeto…
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Deixe uma estrela 🌟 no repositório — isso ajuda no meu crescimento e visibilidade! 😊
