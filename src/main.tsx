@@ -1,13 +1,5 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
 
-/* To use Typescript, change files extencions to .tsx,
-and set this:
-
-createRoot(document.getElementById('root')!).render(    */
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(<App />);
