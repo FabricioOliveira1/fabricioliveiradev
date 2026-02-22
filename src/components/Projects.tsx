@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 
 interface Project {
@@ -7,6 +8,7 @@ interface Project {
   image: string;
   tags: string[];
   link?: string;
+  github?: string;
   description: string;
   inDevelopment?: boolean;
   mobile?: boolean;
@@ -20,6 +22,7 @@ const projects: Project[] = [
     mobile: true,
     tags: ["React Native", "Expo"],
     link: "https://expo.dev/preview/update?message=Corrigido+bug+no+campo+de+cadastro+de+medicamento%2C+e+corrigido+bug+da+area+da+tela+entre+android+e+ios&updateRuntimeVersion=1.0.0&createdAt=2025-07-18T16%3A36%3A28.249Z&slug=exp&projectId=0c50762d-b0c8-43a2-8a6f-bd75abf9c4ce&group=34c20dcd-32a4-46ff-9d00-915d1975a73b",
+    github: "https://github.com/FabricioOliveira1/hora-certa-med",
     description: "Aplicativo para gerenciamento de medicamentos com lembretes e acompanhamento de doses.",
   },
   {
@@ -29,6 +32,7 @@ const projects: Project[] = [
     mobile: true,
     tags: ["React Native", "Expo"],
     link: "",
+    github: "https://github.com/FabricioOliveira1/cftvk-mobile-app",
     description: "Aplicativo para o box de Crossfit VK, oferecendo funcionalidades como agendamento de aulas, acompanhamento de treinos e comunicação com os membros.",
   },
   {
@@ -37,6 +41,7 @@ const projects: Project[] = [
     inDevelopment: false,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     link: "https://cftvk-website.vercel.app/",
+    github: "https://github.com/FabricioOliveira1/cftvk-website",
     description: "Site institucional para o box de Crossfit VK, destacando seus serviços, informações e contato.",
   },
   {
@@ -44,6 +49,7 @@ const projects: Project[] = [
     image: "/assets/impulso-digital-website.png",
     inDevelopment: false,
     link: "https://impulsodigital.dev.br/",
+    github: "https://github.com/FabricioOliveira1/impulso-digital-website",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     description: "Site institucional para a empresa de desenvolvimento de software Impulso Digital, apresentando seus serviços e portfólio.",
   },
@@ -116,7 +122,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -126,17 +132,33 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </span>
           ))}
         </div>
+        <div className="flex gap-2 mt-2">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors"
+            >
+              Ver Projeto
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-2 py-1.5 rounded-md bg-zinc-800 text-white text-xs font-medium hover:bg-zinc-700 transition-colors"
+              title="Ver repositório no GitHub"
+            >
+              <FontAwesomeIcon icon={faGithub} className="mr-1" />
+              GitHub
+            </a>
+          )}
+        </div>
       </div>
     </>
   );
-
-  if (project.link) {
-    return (
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className={className}>
-        {content}
-      </a>
-    );
-  }
 
   return <div className={className}>{content}</div>;
 };
